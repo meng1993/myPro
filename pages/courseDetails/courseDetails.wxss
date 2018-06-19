@@ -1,0 +1,165 @@
+/* pages/index/courseDetails/courseDetails.wxss */
+
+/* @import '../../components/navbar/navbar.wxss'    */
+@import '../../templates/courseDirectoryCell/courseDirectoryCell.wxss';
+@import '../index/index.wxss';
+
+.course-det-backImg {
+    width: 100%;
+    height: 468rpx;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.shareImg {
+    width: 216rpx;
+    height: 64rpx;
+    position: fixed;
+    top: 46rpx;
+    right: -32rpx;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: -1px;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 64rpx;
+    padding-right: 32rpx;
+    background: #ec3131;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+    border-radius: 112rpx;
+}
+
+.cd-price-detail {
+    height: 210rpx;
+    padding: 0 32rpx;
+    position: relative;
+}
+.notActive{
+    background: rgba(238,127,0,0.40); 
+}
+.cd-count {
+    margin-top: 30rpx;
+}
+.noDirectory{
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 100rpx 0 0;
+     font-size: 28rpx;
+    color: #999;
+}
+.courseDet-IconText {
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #999;
+    margin-left: 8rpx;
+}
+
+.cd-price-icon {
+    font-family: PingFangSC-Medium;
+    font-size: 28rpx;
+    color: #ec3131;
+    font-weight: bold;
+}
+
+.cd-price {
+    font-size: 72rpx;
+}
+
+.cd-not-price {
+    position: absolute;
+    left: 0rpx;
+    bottom: 29.8rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #666;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.cd-countdown-text {
+    font-size: 18rpx;
+    color: #999;
+    font-weight: bold;
+    margin: 0 20rpx;
+    position: relative;
+}
+
+.cd-returnMoney {
+    position: absolute;
+    right: 28rpx;
+    bottom: 30rpx;
+    width: 144rpx;
+    height: 46rpx;
+}
+
+.cd-footer-det {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* padding: 0 28rpx; */
+    justify-content: space-between;
+}
+
+.courseDet-bottom {
+    display: flex;
+    height: 100%;
+}
+
+.cd-botIcon {
+    width: 44rpx;
+    padding: 0 24rpx 4rpx 38rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cd-botIcon2 {
+    width: 44rpx;
+    padding: 0 48rpx 4rpx 24rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cd-bot-text {
+    font-size: 20rpx;
+    color: #353535;
+}
+
+.cd-bot-icon {
+    font-size: 36rpx;
+}
+
+.cd-buy {
+    font-family: PingFangSC-Regular;
+    font-size: 32rpx;
+    color: #171717;
+    border: 1px solid #e5e5e5;
+}
+
+.cd-groupBuy {
+    background: #ee7f00;
+    font-size: 32rpx;
+    color: #fff;
+    margin-left: 18rpx;
+}
+.cd-desc{
+    padding: 44rpx 28rpx 20rpx;
+    word-wrap:break-word;
+}
+.cd-buy-symbol {
+    font-size: 24rpx;
+}
+
+.tabbar-content {
+    /* margin-bottom: 128rpx;   */
+}
+
+.tabbarFree {
+    position: absolute;
+    top: 22rpx;
+    right: 67rpx;
+    line-height: 38rpx;
+}

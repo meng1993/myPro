@@ -1,0 +1,219 @@
+/**app.wxss**/
+@import 'weui.wxss';
+@import 'lib/iconfont/iconfont.wxss';
+
+.customLoading {
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: 450rpx;
+    font-size: 32rpx;
+    color: #353535;
+}
+
+button::after {
+    border: 0;
+}
+
+.backtoIndex {
+    width: 82rpx;
+    height: 82rpx;
+    position: fixed;
+    right: 28rpx;
+    bottom: 138rpx;
+}
+
+.login-toast {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.container {
+    /* height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-top: 28rpx; */
+}
+.noCourseImg {
+    width: 202rpx;
+    height: 138rpx;
+}
+.noContentText {
+    font-size: 28rpx;
+    color: #999;
+    text-align: center;
+    margin-top: 34rpx;
+}
+
+.noList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding-top: 272rpx;
+}
+image {
+    display: block;
+}
+
+page {
+    background-color: #f2f2f2;
+}
+
+view {
+    background-color: #fff;
+}
+
+.sep-375-10 {
+    height: 20rpx;
+    background-color: #f2f2f2;
+}
+
+.sep-375-5 {
+    height: 10rpx;
+    background-color: #f2f2f2;
+}
+
+/*
+宽375px 高0.5px的分割线
+*/
+
+.sep-375-href {
+    height: 1px;
+    background-color: #e5e5e5;
+    transform: scaleY(0.5);
+    -webkittransform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+
+/*
+宽375px 高64px的固定底部（fixed）
+*/
+
+.my-375-64-footer {
+    background: #fff;
+    position: fixed;
+    height: 128rpx;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.my-160-44-btn {
+    width: 320rpx;
+    height: 88rpx;
+    border-radius: 200rpx;
+    text-align: center;
+    line-height: 88rpx;
+}
+.btn-250-40{
+    width: 500rpx;
+    height: 80rpx;
+    background: #ee7f00;
+    border-radius: 200rpx;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+.my-120-40-btn{
+     width: 240rpx;
+    height: 80rpx;
+    border-radius: 200rpx;
+    text-align: center;
+    line-height: 80rpx;
+}
+.btn-319-44 {
+    width: 638rpx;
+    height: 88rpx;
+    background: #ee7f00;
+    border-radius: 200rpx;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 32rpx;
+}
+
+.sep-319-href {
+    height: 1px;
+    width: 638rpx;
+    margin: auto;
+    background-color: #e5e5e5;
+    transform: scaleY(0.5);
+    -webkittransform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+
+.iconfont-next {
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+    margin-left: 12rpx;
+}
+
+.weui-tab__panel {
+    padding-top: 0;
+}
+
+/*
+宽362的分割线
+*/
+
+.index-sep {
+    height: 1px;
+    background-color: #e5e5e5;
+    transform: scaleY(0.5);
+    -webkittransform: scaleY(0.5);
+    transform-origin: 0 0;
+    margin-left: 28rpx;
+    width: 722rpx;
+}
+
+/* 
+tabbar的样式
+*/
+
+.my-tabBar {
+    display: flex;
+    height: 100rpx;
+}
+
+.tabBar-item {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 100rpx;
+}
+
+.tabBar-title {
+    width: auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.tabBar-slider {
+    width: 100%;
+    height: 6rpx;
+    background: #ee7f00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar__item_on {
+    color: #ee7f00;
+}
+
+.navbar__item_off {
+    color: #353535;
+}

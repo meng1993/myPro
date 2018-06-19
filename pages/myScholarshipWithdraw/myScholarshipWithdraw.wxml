@@ -1,0 +1,24 @@
+<!--pages/myScholarshipWithdraw/myScholarshipWithdraw.wxml--> 
+<view class='scholarshipWithdraw'>
+  <view class='describe'>提现到微信零钱</view>
+  <view class='input_box'>
+    <view class='box_left'>¥</view>
+    <input class='box_right' value='{{withDrawMoney}}' bindinput='moneyInput' type='number'></input>
+  </view>
+  <view class='describe'>可提现金额：¥{{money/100}}</view>
+  <form wx:if="{{money/100 >= 1 && withDrawMoney>=1 && withDrawMoney<=money/100}}" bindsubmit="toWithdrawal" report-submit='true'>
+    <button class=' btn_withdraw btn-319-44' form-type="submit">立即提现</button>
+  </form>  
+  <view wx:else class='btn_withdraw btn-319-44 not_btn'>立即提现</view>
+  
+
+  <!-- <navigator class='withdraw_note' url='../../pages/myScholarshipDetail/myScholarshipDetail'>提现记录></navigator> -->
+   <view class='withdraw_note' bindtap='toScholarshipDetail'></view> 
+  <view class='withdraw_describe'>- 奖学金提现说明 -</view>
+  <view class='des_content'>
+    <view>1、微信已进行实名认证的用户才可提现。</view>
+    <view>2、提现最小金额100元，单日提现最大金额200。</view>
+    <view>3、提现时间：每天早上10:00至18:30。</view>
+    <view>4、提现申请通过后，1~2个工作日可到账。</view>
+  </view>
+</view>

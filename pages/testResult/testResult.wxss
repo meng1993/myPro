@@ -1,0 +1,46 @@
+/* pages/testResult/testResult.wxss */
+.test_result {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.test_result .result_img {
+  width: 330rpx;
+  height: 252rpx;
+  margin: 20rpx 210rpx 0;
+}
+.test_result .result_text {
+  width: 750rpx;
+  height: 66rpx;
+  text-align: center;
+  line-height: 66rpx;
+  font-size: 48rpx;
+  color: #353535;
+  margin: 40rpx 0 30rpx;
+}
+.test_result .result_describe {
+  width: 694rpx;
+  padding: 0 28rpx;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 1.4;
+}
+.test_result .btn_vitae {
+  margin-top: 86rpx;
+}
+.test_result .btn_diploma {
+  margin-top: 28rpx;
+  color: #353535;
+  background: #F8F8F8;
+  border: 1px solid rgba(5, 5, 5, 0.1);
+  /* border-radius: 100px; */
+}
+.test_result .bottom {
+  width: 750rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top: 94rpx;
+  font-size: 28rpx;
+  color: #999999;
+}

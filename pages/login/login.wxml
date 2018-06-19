@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+    <input class='login-input' type='number' maxlength="11" placeholder='请输入手机号' bindinput="inputPhone"></input>
+    <view class='sep-319-href'></view>
+    <view class='code-father'>
+        <input class='login-input' maxlength="4" type='number' placeholder='请输入验证码' bindinput="inputCode">
+        <view wx:if="{{noCode}}" class='code' catchtap='getCode'>{{codeText}}</view>
+        <view wx:else class='code' >{{codeTime}}s</view>
+        </input>
+    </view>
+
+    <view class='sep-319-href'></view>
+    <button wx:if="{{vcode!=''&&phone!=''}}" class='btn-319-44 login-btn' style="background: #ee7f00" bindtap='login'>登录</button>
+    <button wx:else class='btn-319-44 login-btn' style="background: rgba(238,127,0,0.40)">登录</button>
+
+</view>

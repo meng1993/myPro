@@ -1,0 +1,13 @@
+<!--pages/voiceDownList/voiceDownList.wxml-->
+<view class='downList'>
+  <image class='title_img' src='{{courseDirectoryCellList.bigCover}}'></image>
+  <view class='downList_title'>
+    <view class='lesson_minute'>共计：{{courseDirectoryCellList.downNum}}课时/{{courseDirectoryCellList.duration}}分钟</view>
+    <view class='has_download'>已下载{{courseDirectoryCellList.downNum}}课时</view>
+  </view>
+  <view class='sep-375-5'></view>
+  <import src='../../templates/courseDirectoryCell/courseDirectoryCell.wxml' />
+  <view bindtap='toplay' data-courseId="{{courseDirectoryCellList.courseId}}" data-sort="{{index+1}}" data-list="{{courseDirectoryCellList.list}}" id="{{index}}" wx:for="{{courseDirectoryCellList.list}}" wx:key="this">
+      <template is="courseDirectoryCell" data="{{item, index, downList}}"/>
+  </view>
+</view>

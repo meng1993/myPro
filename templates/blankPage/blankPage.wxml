@@ -1,0 +1,6 @@
+<template name="noContent">
+    <view class='noContent'>
+        <image class='noConImg' src="{{imgSrc}}"></image>
+        <text class='noContentText'>您还没有优惠券</text>
+    </view>
+</template>

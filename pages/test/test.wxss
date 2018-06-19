@@ -1,0 +1,104 @@
+.test{
+  /* width: 750rpx;
+  height: 1200rpx; */
+  /* position: fixed; */
+  height: auto;
+  width: 100vw;
+  background-color: #fff;
+}
+.test .test_top{
+  width: 638rpx;
+  height: 128rpx;
+  line-height: 128rpx;
+  font-size: 32rpx;
+  color: #353535;
+  margin-left: 28rpx;
+  font-weight: bold;
+  background: #FFFFFF;
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10);
+  padding:0 28rpx;
+}
+.test .test_top .test_name{
+  float: left;
+}
+.test .test_top .test_progress{
+  height: 100%;
+  float: right;
+}
+.test .test_top .test_progress .current_num{
+  font-size: 80rpx;
+  color: #EE7F00;
+}
+.test .test_top .test_progress .total_num{
+  font-size: 28rpx;
+  color: #FFC871;
+}
+
+.test .test_type{
+  width: 132rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #EE7F00;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  margin: 48rpx 0;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.test .ques_ans{
+  width: 638rpx;
+  padding:0 28rpx;
+}
+.test .ques_ans .question{
+  font-size: 36rpx;
+  color: #353535;
+  font-weight: bold;
+}
+.test .ques_ans .answer .label{
+  display: inline-block;
+  width: 100%;
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  color: #666666;
+}
+.test .ques_ans .answer .label radio{
+  float: left;
+}
+.test .ques_ans .answer .label checkbox{
+  float: left;
+}
+.test .btn_box{
+  height: 244rpx;
+}
+.test .btn_common{
+  float: left;
+  width: 375rpx;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  color: #EE7F00;
+  margin: 100rpx 0;
+}
+.test .not_btn{
+  color: #FFC871;
+}
+.test .last_title{
+  width:100%;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+}
+.test .btn_submit{
+   width: 694rpx;
+  height: 94rpx;
+  margin-left: 28rpx;
+  text-align: center;
+  line-height: 94rpx;
+  color: #FFFFFF;
+  background: #EE7F00;
+  border-radius: 200rpx;  
+  margin-top: 30rpx;
+   font-size: 32rpx; 
+}

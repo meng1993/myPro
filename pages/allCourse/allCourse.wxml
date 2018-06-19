@@ -1,0 +1,40 @@
+<!--pages/allCourse/allCourse.wxml-->
+<!--引入自定义课程模板 -->
+<import src='../../templates/blankPage/blankPage.wxml' />
+<view class='allcourse-top'>
+    <view style='flex: 1' wx:for="{{list}}">
+        <image class='allcourse-img' src="{{activeIndex==index? '../../images/btn_active.png':'../../images/btn_normal.png' }}" bindtap='chooseCourse' id="{{index}}">
+            <text class="course-title {{activeIndex==index? 'active':'notactive' }}">{{item}}</text>
+        </image>
+    </view>
+</view>
+<import src='../../templates/courseCell/courseCell.wxml' />
+<view style='margin-top: 100rpx'>
+    <view class='customLoading' wx:if="{{courseCellList == 'loading'}}">
+    </view>
+    <view class='myloadmore' wx:if="{{refresh==true}}">
+        <view class="weui-loading"></view>
+        <text class="nomore">正在刷新...</text>
+    </view>
+    <view wx:if="{{courseCellList != 'loading'&&courseCellList != ''}}" wx:for="{{courseCellList}}" wx:key="this" id="{{index}}" bindtap='toCourseDetails'>
+        <template is="courseCell" data="{{item}}" />
+        <view hidden='{{index==courseCellList.length-1}}' class='index-sep'></view>
+    </view>
+    <view class='noList' wx:if="{{courseCellList == ''}}">
+        <image class='noCourseImg' src="../../images/courseNo.png"></image>
+        <text class='noContentText'>暂时没有相关课程</text>
+    </view>
+
+
+    <view wx:if="{{loadMore}}" class="myloadmore" style='background-color: #f2f2f2'>
+        <view class="weui-loading"></view>
+        <text class="nomore">正在加载...</text>
+    </view>
+
+    <view class='noMoreView' wx:if="{{noMore==true}}" style='background-color: #f2f2f2'>
+        <view class='nomore-sep'></view>
+        <text class='nomore'>暂无更多数据</text>
+        <view class='nomore-sep'></view>
+    </view>
+
+</view>

@@ -1,0 +1,20 @@
+<!-- 课程列表模板-->
+<template name="discount">
+  <view style='heiht: 100%;padding-top: 28rpx;background-color: #f2f2f2'>
+    <image class='discount-img' src="{{canUse? '../../images/card.png': '../../images/card_disable.png'}}">
+      <view class='discount-detail noColor' style="color: {{canUse? '#ffffff' :'#666666' }}">
+        <view class='discount-left noColor'>
+          <text class='discount-title'>{{item.couponName}}</text>
+          <text class='discount-indate'>有限期至{{item.time || item.validEndTime }}</text>
+        </view>
+        <text class='discount-right'>
+				<text class='discount-indate'>￥</text>{{item.couponMoney/100}}
+        </text>
+      </view>
+
+      <text class='discount-explain'>{{item.couponDesc}}
+			<!-- <text class='discount-explain'>满{{item.spendMoney/100}}可用 -->
+			</text>
+    </image>
+  </view>
+</template>

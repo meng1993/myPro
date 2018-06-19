@@ -1,0 +1,43 @@
+.indexToast {
+    width: 462rpx;
+    height: 326rpx;
+    margin-top: 310rpx;
+    margin-left: 96rpx;
+    border-radius: 4px;
+    padding: 50rpx 50rpx 0 48rpx;
+    text-align: center;
+    position: relative;
+}
+
+.toastTitle {
+    font-size: 36rpx;
+    color: #000;
+    text-align: center;
+}
+
+.toastContent {
+    font-size: 30rpx;
+    color: #888;
+    text-align: center;
+    margin-top: 16rpx;
+}
+.toastSep{
+    height: 2rpx;
+    background-color: #e5e5e5;
+    transform: translateY(0.5);
+    position: absolute;
+    bottom: 99rpx;
+    left: 0;
+    width: 559rpx;
+}
+.setBtn {
+    position: absolute;
+    height: 99rpx;
+    font-size: 36rpx;
+    color: #ee7f00;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 560rpx;
+    background: #fff;
+}

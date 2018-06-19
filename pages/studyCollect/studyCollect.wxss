@@ -1,0 +1,67 @@
+/* pages/studyCollect/studyCollect.wxss */
+.collect_box{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff2d8;
+}
+.collect_box .content{
+  position: absolute;
+  width: 658rpx;
+  height: 1156rpx;
+  left: 50%;
+  top: 50%;
+  margin: -578rpx -329rpx;
+  background: #fff;
+  box-shadow: 0 1px 10px 0 rgba(245,166,35,0.30);
+  border-radius: 5px;
+}
+.collect_box .content .content_top{
+  width: 100%;
+  height: 414rpx;
+  background-color: red;
+}
+.collect_box .content .chat_box{
+  width: 100%;
+  height: 80rpx;
+  margin: 52rpx 0;
+}
+.collect_box .content .chat_box .head_img{
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 16rpx 0 28rpx;
+}
+.collect_box .content .chat_box .chat_box{
+  position: relative;
+  float: left;
+  width: 480rpx;
+  height: 60rpx;
+  margin: 10rpx 0 10rpx 0;
+}
+.collect_box .content .chat_box .chat_box .describe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  color: #353535;
+  top: 0;
+  left: 0;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+.collect_box .content .invitate{
+  background: #EE7F00;
+  margin: 0 auto 60rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+.collect_box .content .result_desc{
+  width: 100%;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666666;
+  margin-bottom: 34rpx;
+}

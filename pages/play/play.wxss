@@ -1,0 +1,137 @@
+@import '../../templates/courseDirectoryCell/courseDirectoryCell.wxss';
+
+.page {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+}
+.play-page{
+    overflow: hidden;
+}
+
+.play-img {
+    width: 566rpx;
+    height: 348rpx;
+    margin: 58rpx auto 65rpx;
+    vertical-align: bottom;
+    border-radius: 4px;
+}
+
+.play-title {
+    font-size: 40rpx;
+    color: #353535;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 145rpx;
+}
+
+.play-contentIcon {
+    display: flex;
+    margin-bottom: 90rpx;
+    padding: 10rpx 140rpx;
+}
+
+.contentIcon {
+    flex: 1;
+    font-size: 48rpx;
+    color: #666;
+    justify-content: center;
+    align-items: content;
+    display: flex;
+}
+
+.shareBtn {
+    background-color: #fff;
+    flex: 1;
+    line-height: 76rpx; 
+    float: left;
+    font-size: 32rpx;
+    color: #353535;
+    margin: 0;
+    padding: 0;
+}
+
+.play-toward-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80rpx 174rpx 106rpx;
+}
+
+.playToward {
+    /* width: 54rpx;
+    height: 34rpx; */
+    font-size: 34rpx;
+}
+
+.notToward {
+    color: #999;
+}
+
+.canToward {
+    color: #353535;
+}
+
+.play-control {
+    width: 110rpx;
+    height: 110rpx;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 110rpx;
+}
+
+.play-slider-cell {
+    display: flex;
+    align-items: center;
+    padding: 0 28rpx;
+}
+
+.play-slider {
+    width: 500rpx;
+    margin: 0;
+}
+
+.slider-time {
+    font-size: 28rpx;
+    color: #999;
+    width: 97rpx;
+}
+
+.rightTime {
+    text-align: right;
+}
+
+.play-audio {
+    display: inline;
+    line-height: normal;
+}
+
+.my-play-list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.play-scroll {
+    position: fixed;
+    bottom: 0;
+    height: 592rpx;
+    background: #fff;
+}
+
+.play-directory {
+    position: fixed;
+    height: 100rpx;
+    padding: 0 28rpx;
+    font-size: 36rpx;
+    color: #353535;
+    z-index: 2;
+    width: 694rpx;
+    top: 614rpx;
+    display: flex;
+    align-items: center;
+}
+.playList{
+    margin-top: 100rpx;
+}

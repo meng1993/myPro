@@ -1,0 +1,51 @@
+.my-player-view {
+     width: 100%;
+}
+
+.my-player {
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+.liveSwitchImg{
+    width: 96rpx;
+    height: 88rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.switch{
+  width: 24rpx;
+  height: 32rpx;
+}
+.push-operate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 750rpx;
+    height: 88rpx;
+}
+
+.operate-left {
+    display: flex;
+    align-items: center;
+}
+.amplify{
+	width: 32rpx;
+	height: 32rpx;
+}
+.fullView{
+    width: 104rpx;
+	height: 88rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.currentTime {
+    font-size: 28rpx;
+}

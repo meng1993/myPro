@@ -1,0 +1,14 @@
+/* pages/offlineCourse/offlineCourse.wxss */
+
+.offlineCourse-img {
+    width: 680rpx;
+    height: 426rpx;
+    display: block;
+	border-radius: 5px;
+}
+
+.offlineCourse {
+    width: 680rpx;
+    height: 426rpx;
+    padding: 35rpx;
+}

@@ -1,0 +1,65 @@
+/* pages/receiveInvite/receiveInvite.wxss */
+.receive_box{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #FFF3E1;
+}
+.receive_box .receive_bg{
+  position: relative;
+  width: 694rpx;
+  height: 686rpx;
+  padding-top: 142rpx;
+  margin: 0 28rpx 44rpx;
+} 
+.receive_box .receive_bg .head_img{
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  left: 287rpx;
+  top: 234rpx;
+  border-radius: 50%;
+} 
+.receive_box .receive_bg .by_share{
+  position: absolute;
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  left: 0;
+  top: 374rpx;
+  font-size: 14px;
+  color: #000000;
+  background: transparent;
+}
+.receive_box .receive_bg .receive_money{
+  position: absolute;
+  width: 520rpx;
+  height: 186rpx;
+  left: 84rpx;
+  top: 486rpx;
+  background: transparent;
+}
+.receive_box .receive_bg .receive_money .left{
+  float: left;
+  width: 292rpx;
+  height: 186rpx;
+  text-align: center;
+  line-height: 186rpx;
+  font-size: 42rpx;
+  color: #FFFFFF;
+  background: transparent;
+}
+.receive_box .receive_bg .receive_money .right{
+  float: right;
+  width: 220rpx;
+  height: 186rpx;
+  text-align: center;
+  line-height: 186rpx;
+  font-size: 100rpx;
+  color: #FFFFFF;
+  background: transparent;
+}
+.receive_box .receive_bg .receive_money .right text{
+  font-size: 36rpx;
+}

@@ -1,0 +1,20 @@
+<!--打卡头部-->
+  <!--top结果部分-->
+<template name="punch_top">
+  <!-- <view class='top_result'>
+    <view class='result_item'>
+      <view class='number'>{{topData.realMoney}}</view>
+      <view class='name'>报名学费</view>
+    </view>
+    <view class='result_item'>
+      <i class="left"></i>
+      <view class='number'>{{topData.bonusPool/100}}</view>
+      <view class='name'>奖金池</view>
+      <i class="right"></i>
+    </view>
+    <view class='result_item'>
+      <view class='number'>{{clockNum}}</view>
+      <view class='name'>打卡次数</view>
+    </view>
+  </view> -->
+</template>

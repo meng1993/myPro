@@ -1,0 +1,26 @@
+<!--pages/myCollage/myCollage.wxml-->  
+<view class='my_collage'>
+  <!--样式为全局样式-->
+  <view class='my-tabBar btn_group'>
+    <view wx:for="{{tabs}}" wx:key="this" class='tabBar-item' id="{{index}}" bindtap='tabClick' style='position:relative'>
+      <text style='font-size: 32rpx;position:relative' class="tabBar-title {{activeIndex==index? 'navbar__item_on' : 'navbar__item_off'}}">{{item}}
+        <text class="tabBar-slider" style="display: {{activeIndex==index ? '' : 'none'}}"></text>
+      </text>
+    </view>
+  </view>
+  <view class='sep-375-5'></view>
+
+  <!--引入自定义课程模板-->
+  <import src = '../../templates/courseCell/courseCell.wxml' />
+  <scroll-view scroll-y class='scroll_box' bindscrolltolower="bindDownLoad" bindscrolltoupper="refresh">
+    <view wx:for="{{courseCellList}}" wx:key="this" id="{{index}}" bindtap='toCourseGroup' data-groupId="{{item.createId}}">
+      <template  is="courseCell" data="{{item, Index, myCollage}}" />
+    </view>
+    <view class='noList' wx:if="{{courseCellList.length == 0}}">
+      <image class='noCourseImg' src="../../images/collageNo.png"></image>
+      <text class='noContentText'>暂无任何拼团记录</text>
+    </view>
+  </scroll-view>
+  
+
+</view>

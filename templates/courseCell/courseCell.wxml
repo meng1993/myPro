@@ -1,0 +1,98 @@
+<!-- 课程列表模板--> 
+<template name="courseCell">
+    <view class='rec-item' style="padding-top: {{!Index? 44+'rpx' : 28+ 'rpx'}}; padding-bottom: {{!Index? 42+'rpx' : 28 +'rpx'}}">
+        <image class='item-left' src="{{item.smallCover}}" mode="aspectFill"></image>  
+        <view class='item-right'>
+            <view>
+                <view class='item-title'>{{item.mainTitle}}</view>
+                <view class='item-content'>{{item.secondTitle}}</view>
+                <view class='item-price' wx:if="{{hasBuy}}">￥{{item.realMoney/100}}</view>
+            </view>
+            <!--添加！scholarship-->
+             <view wx:if="{{!hasBuy&&!offline&&!offline_ing&&!starTeacher&&!scholarship&&!myCollage&&!livePay}}" style="display: flex; flex-direction: column">
+                <view style='display: flex;align-items: center'>
+                    <icon class='iconfont-time item-time'></icon>
+                    <view class='item-time item-icon-text'>{{item.hourNum}}课时/{{item.duration || 0}}分钟</view>
+                </view>
+                <view style='display: flex;align-items: center'>
+                    <icon class=" item-time {{playNum? 'iconfont-play' : 'iconfont-shouting'}}">
+                    </icon>
+                    <view class='item-time item-icon-text'>{{item.studyNum || 0 }}{{!Index? '人':'人已学习'}} </view>
+                </view>
+            </view> 
+
+              <!--已离线音频-->
+            <view wx:if="{{offline}}" style='display: flex;align-items: center'>
+                <icon class='iconfont-time item-time'></icon>
+                <wxs module="filters" src="./courseCell.wxs"></wxs>
+                <view class='item-time item-icon-text'>{{filters.toFix(item.fileSize/1024)}}M</view>
+                <icon class=" item-time iconfont-headsetx">
+                </icon>
+                <view class='item-time item-icon-text'>{{item.classHour}}课时</view>
+                <image catchtap='deleteCourse' data-courseId="{{item.courseId}}" style='width:32rpx;height:32rpx;margin-left:220rpx;' src='../../images/study/btn_delete.png'></image>
+            </view>
+
+             <!--离线中音频-->
+            <view wx:if="{{offline_ing}}" style='display: flex;align-items: center'>
+                <icon class='iconfont-time item-time'></icon>
+                <view class='item-time item-icon-text'>{{item.time}}</view>
+                <icon class=" item-time iconfont-headsetx">
+                </icon>
+                <view class='item-time item-icon-text'>{{item.classHour}}KB</view>
+                <view style='height:32rpx;margin-left:100rpx;font-size:24rpx;color:#999999;' >已下载：50%</view>
+            </view>
+
+<!--直播课程的付款详情  -->
+			<view wx:if="{{livePay}}">
+			  <view class='item-content groupPrice' >
+                <text class='currentPrice'>￥<text style='font-size:36rpx'>{{item.sellPrice}}</text></text> 
+            </view>
+			</view>
+
+            <!--已购买课程-->
+            <view class='item-time' wx:if="{{hasBuy}}">
+                {{item.time}}
+            </view>
+            <!--czy新增(我的奖学金页面)-->
+            <view class='item-time share_price' wx:if="{{scholarship}}">
+                <view style='font-size:20rpx;line-height:80rpx;'>¥</view>{{item.sellPrice/100}}
+                <view class='btn_share' catchtap='toInviteCard' data-courseId='{{item.courseId}}'>分享赚¥{{item.stairDistMoney/100}}</view>
+            </view>
+
+            <!--czy新增（我的拼团页面）-->
+            <view class='item-time my_collage' wx:if="{{myCollage}}" style='height:'>
+              <view style='width:100rpx;font-size:28rpx;line-height:80rpx;color: #666666;'>拼团价</view> 
+              <view style='font-size:20rpx;line-height:80rpx;'>¥<text style='font-size:40rpx;'>{{item.groupPrice/100}}</text></view>
+              <!-- <view class='btn_share'>分享赚¥4.9</view> -->
+            </view>
+            <view class='item-time my_collage' wx:if="{{myCollage}}" style='height:'>
+              <view class='collage_date'>{{item.time}}</view> 
+              <view wx:if="{{item.groupStatus == 2}}" class='collage_status status_success'>拼团成功</view>
+              <view wx:elif="{{item.groupStatus == 3}}" class='collage_status status_fail'>拼团失败</view>
+              <view wx:else class='collage_status status_ing'>拼团中</view>
+            
+            </view>
+
+            <view wx:if="{{starTeacher}}" style='display: flex;align-items: center'>
+                <icon class='iconfont-headsetx item-time'></icon>
+                <view class='item-time item-icon-text'> {{item.people}}人 | 零基础速成班</view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="groupCell" >
+    <view class='rec-item' style='padding-top: 36rpx; padding-bottom: 36rpx;background: rgba(0, 0, 0, 0);'>
+        <image class='group-left' src='{{groupData.smallCover}}'></image>
+        <view class='item-right'>
+            <view>
+                <view class='item-title'>{{groupData.mainTitle}}</view>
+                <view class='item-content group-content'>{{groupData.secondTitle}}</view>
+            </view>
+            <view class='item-content groupPrice' >
+                组团价: <text class='currentPrice'>￥<text style='font-size:36rpx'>{{groupData.groupPrice/100}}</text></text> <text class='original'>￥{{groupData.sellPrice/100}}</text>
+            </view>
+        </view>
+		<view wx:if="{{groupData.groupStatus!=1}}" class='imaginaryLine'></view>
+    </view>
+</template>

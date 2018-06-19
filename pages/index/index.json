@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"loginToast": "../../components/loginToast/loginToast",
+		"phoneToast": "../../components/phoneToast/phoneToast"
+	},
+	"navigationBarTitleText": "首页"
+}

@@ -1,0 +1,77 @@
+{
+    "pages": [
+     
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/my/my",
+        "pages/study/study",
+        "pages/liveCourses/liveCourses",
+        "pages/allCourse/allCourse",
+        "pages/courseDetails/courseDetails",
+        "pages/play/play",
+        "pages/paymentDetail/paymentDetail",
+        "pages/offlineCourse/offlineCourse",
+       
+        "pages/hasBuyCourse/hasBuyCourse",
+        "pages/offlineVoice/offlineVoice",
+        "pages/courseGroup/courseGroup",
+        "pages/useDiscount/useDiscount",
+        "pages/punchClock/punchClock",
+        "pages/scholarship/scholarship",
+        "pages/courseRecommend/courseRecommend",
+        "pages/test/test",
+        "pages/testResult/testResult",
+        "pages/editMessage/editMessage",
+        "pages/myScholarship/myScholarship",
+        "pages/myScholarshipDetail/myScholarshipDetail",
+        "pages/myScholarshipWithdraw/myScholarshipWithdraw",
+        "pages/myInvite/myInvite",
+        "pages/myCollage/myCollage",
+        "pages/myCoupon/myCoupon",
+        "pages/myCouponRule/myCouponRule",
+        "pages/liveRoom/liveRoom",
+        "pages/appoint/appoint",
+        "pages/login/login",
+        "pages/voiceDownList/voiceDownList",
+        "pages/studyCollect/studyCollect",
+        "pages/inviteCard/inviteCard",
+        "pages/receiveInvite/receiveInvite",
+        "pages/liveRoomPlay/liveRoomPlay",
+        "pages/liveRoomPush/liveRoomPush",
+        "pages/groupNotice/groupNotice",
+        "pages/draft/draft",
+        "pages/webView/webView"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#f2f2f2"
+    },
+    "tabBar": {
+        "color": "#a9b7b7",
+        "selectedColor": "#ee7f00",
+        "borderStyle": "black",
+        "list": [
+            {
+                "selectedIconPath": "images/tabbaer-index_active.png",
+                "iconPath": "images/tabbar-index.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "selectedIconPath": "images/tabbar-study_active.png",
+                "iconPath": "images/study_normal.png",
+                "pagePath": "pages/study/study",
+                "text": "学习"
+            },
+            {
+                "selectedIconPath": "images/tabbar-my_active.png",
+                "iconPath": "images/me_normal.png",
+                "pagePath": "pages/my/my",
+                "text": "我的"
+            }
+        ]
+    }
+}

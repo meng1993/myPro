@@ -1,0 +1,28 @@
+/* pages/voiceDownList/voiceDownList.wxss */
+@import '../../templates/courseDirectoryCell/courseDirectoryCell.wxss';
+.title_img{
+  width: 750rpx;
+  height: 380rpx;
+}
+.downList_title{
+  width: 694rpx;
+  height: 100rpx;
+  padding: 0 28rpx;
+}
+.downList_title .lesson_minute{
+   float: left; 
+  width: 300rpx;
+  height: 100%;
+  line-height: 100rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.downList_title .has_download{
+  float: right;
+  width: 200rpx;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999999;
+}

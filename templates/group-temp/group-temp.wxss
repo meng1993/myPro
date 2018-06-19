@@ -1,0 +1,83 @@
+.memberCell {
+  display: flex;
+  padding: 0 28rpx;
+  height: 120rpx;
+  align-items: center;
+}
+.cell-avatar {
+  width: 74rpx;
+  height: 74rpx;
+  margin-right: 20rpx;
+  border-radius: 74rpx;
+}
+.member-name {
+  font-size: 32rpx;
+  color: #353535;
+  position: relative;
+  display: inline-block;
+}
+.head {
+  position: absolute;
+  width: 60rpx;
+  height: 30rpx;
+  right: -70rpx;
+  bottom: 5rpx;
+  background: #ee7f00;
+  border-radius: 100px;
+  font-size: 20rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+}
+.member-date {
+  font-size: 28rpx;
+  color: #999;
+}
+.group-success {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 422rpx;
+  padding: 38rpx auto 28rpx;
+  /* justify-content: space-between; */
+}
+.group-success-text {
+  font-size: 36rpx;
+  color: #89c268;
+  font-weight: bold;
+  display: flex;
+  margin-top: 60rpx;
+  justify-content: center;
+}
+.success-icon {
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 22rpx;
+}
+.QRcode {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 36rpx auto 16rpx;
+}
+.join {
+  font-size: 24rpx;
+  color: #666;
+  margin: 0 auto;
+}
+.join-weal {
+  width: 582rpx;
+  padding: 10rpx 28rpx 28rpx;
+  background: #f9f9f9;
+  margin: 0 28rpx 0;
+  display: block;
+}
+.join-weal-title {
+  font-size: 26rpx;
+  color: #353535;
+  font-weight: bold;
+}
+.join-weal-detail {
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+}

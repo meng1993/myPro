@@ -1,0 +1,21 @@
+<template name="punch_list"> 
+  <!--下边内容部分-->
+    <!--打卡头部-->
+    <view class='content_top'>
+      <view class='content_top_title'>打卡日历</view>
+      <view class='content_top_describe' bindtap='jj' data-hh="11">
+        <image src='../../images/2.png'></image>
+        瓜分奖金说明
+      </view>
+    </view>
+    <!--打卡列表-->
+    <view class='punch_content'>
+      <view class='img_item' wx:for="123456">
+        <image src='../../images/study/btn_punch_checked.png'></image>
+        <i></i>
+         <text>3.14</text> 
+      </view>
+      
+    
+    </view>
+</template>

@@ -1,0 +1,25 @@
+<view>
+    <live-pusher id="videoPusher" style="height: {{isFullScreen==true ? 1206+'rpx' : 468+'rpx'}}" class="video" url="{{url}}" mode="{{mode}}" enable-camera="{{enableCamera}}" beauty="{{beauty}}" whiteness="{{whiteness}}" orientation="{{orientation}}" muted="{{muted}}" bindstatechange="statechange" binderror="error">
+        <cover-view class='push-operate'>
+            <cover-view class='operate-left'>
+                <cover-view bindtap='play' wx:if="{{pushing==false}}" class='liveSwitchImg'>
+                    <cover-image class=' switch' src='../../images/livePause.png'></cover-image>
+                </cover-view>
+                <cover-view wx:else bindtap='pause' class='liveSwitchImg'>
+                    <cover-image class=' switch' src='../../images/livePlay.png'></cover-image>
+                </cover-view>
+
+
+                <cover-view class='currentTime'>00:30</cover-view>
+            </cover-view>
+
+             <cover-view bindtap='fullScreen' class='fullView'>
+                 <cover-image class='amplify' src='../../images/amplify.png'></cover-image>
+            </cover-view>
+
+           
+        </cover-view>
+
+
+    </live-pusher>
+</view>

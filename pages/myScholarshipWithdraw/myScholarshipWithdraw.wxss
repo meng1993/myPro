@@ -1,0 +1,81 @@
+/* pages/myScholarshipWithdraw/myScholarshipWithdraw.wxss */
+.scholarshipWithdraw {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.scholarshipWithdraw .describe {
+  width: 400rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #999999;
+  margin: 84rpx 0 76rpx 40rpx;
+}
+.scholarshipWithdraw .input_box {
+  width: 694rpx;
+  height: 120rpx;
+  border-bottom: 1px solid #E5E5E5;
+  margin-left: 28rpx;
+}
+.scholarshipWithdraw .input_box .box_left {
+  float: left;
+  width: 60rpx;
+  /* height: 120rpx; */
+  height: 100%;
+  text-align: center;
+  line-height: 120rpx;
+  font-size: 84rpx;
+  color: #353535;
+}
+.scholarshipWithdraw .input_box .box_right {
+  float: left;
+  width: 600rpx;
+  height: 100%;
+  line-height: 120rpx;
+  margin-left: 34rpx;
+  font-size: 44rpx;
+}
+.scholarshipWithdraw .btn_withdraw {
+  margin-top: 100rpx;
+}
+.scholarshipWithdraw .not_btn {
+  background: rgba(238,127,0,0.40);
+}
+.scholarshipWithdraw .withdraw_note {
+  width: 100%;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  color: #353535;
+  margin: 104rpx 0 100rpx;
+}
+.scholarshipWithdraw .withdraw_describe {
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.scholarshipWithdraw .des_content {
+  padding-left: 28rpx;
+  font-size: 28rpx;
+  color: #999999;
+  margin-top: 32rpx;
+}
+
+
+
+.contact {
+    position: absolute;
+    width: 100%;
+    height: 100rpx;
+    background: transparent;
+    color: black;
+}
+
+.contact::after {
+    border: none;
+}

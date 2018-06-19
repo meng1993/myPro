@@ -1,0 +1,21 @@
+<view class='my-tabBar'>
+    <view wx:for="{{tabs}}" wx:key="this" class='tabBar-item' id="{{index}}" bindtap='tabClick'>
+        <text style='font-size: 32rpx' class="tabBar-title {{activeIndex==index? 'navbar__item_on' : 'navbar__item_off'}}">{{item}}
+				<text class="tabBar-slider" style="display: {{activeIndex==index ? '' : 'none'}}">
+				</text>
+        </text>
+    </view>
+</view>
+<!-- <view class='sep-375-5'></view> -->
+<!--引入自定义课程模板 -->
+<import src='../../templates/discount/discount.wxml' />
+<import src='../../templates/blankPage/blankPage.wxml' />
+<view>
+    <view wx:if="{{discountList=='loading'}}"></view>
+    <view wx:if="{{discountList !='' && discountList!='loading'}}" wx:for="{{discountList}}" wx:key="this" id="{{index}}" bindtap='chooseDiscount' style='margin-top: 24rpx;'>
+        <template is="discount" data="{{item, canUse}}" />
+    </view>
+    <view wx:if="{{discountList =='' }}">
+        <template is="noContent" data="{{imgSrc: '../../images/coupon.png'}}" />
+    </view>
+</view>

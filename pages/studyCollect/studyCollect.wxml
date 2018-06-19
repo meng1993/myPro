@@ -1,0 +1,14 @@
+<!--pages/studyCollect/studyCollect.wxml-->
+<view class='collect_box'>
+  <view class='content'>
+    <image src='../../images/1.png' class='content_top'></image>
+    <view class='chat_box'>
+      <image src='../../images/1.png' class='head_img'></image>
+      <image src='../../images/study/chat_box.png' class='chat_box'>
+        <text class='describe'>还差 10 个赞就可以退学费，求赞~ </text>
+      </image>
+    </view>
+    <view class='my-160-44-btn invitate'>召唤好友</view>
+    <view class='result_desc'>暂时没人为你点赞，快去分享求赞~</view>
+  </view>
+</view>

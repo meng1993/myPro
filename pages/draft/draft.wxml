@@ -1,0 +1,20 @@
+<view>
+
+    <view class='myppt'>
+        <swiper bindchange="intervalChange" class='pptSwiper' circular="true" duration="500" previous-margin="0px" next-margin="0px">
+            <block wx:for="{{pptImg}}" wx:key="this">
+                <swiper-item>
+                    <image class="header-top" src='{{item}}'></image>
+                </swiper-item>
+            </block>
+        </swiper>
+
+         <view class='indicator-dots'>
+           {{swiperIndex+1}}/{{pptImg.length}}
+        </view>
+    </view>
+    <view class='draft'>
+        <import src="../../wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+</view>

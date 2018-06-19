@@ -1,0 +1,10 @@
+
+
+	<view class='indexToast' catchtap='stopmaopao'>
+	<view class='toastTitle'>获取授权提示</view>
+	<view class='toastContent'>微信登录需获取您的用户信息，请前往设置</view>
+    <view class='toastSep'></view>
+	<button open-type="getUserInfo" class='setBtn' lang="zh_CN" bindgetuserinfo="getUserInfo">去设置</button>
+	</view>
+
+    

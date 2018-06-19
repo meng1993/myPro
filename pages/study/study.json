@@ -1,0 +1,9 @@
+
+
+{
+        "usingComponents": {
+            "loginToast": "../../components/loginToast/loginToast",
+            "phoneToast": "../../components/phoneToast/phoneToast"
+        },
+		"navigationBarTitleText": "最近学习"
+}

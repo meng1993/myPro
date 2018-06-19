@@ -1,0 +1,21 @@
+<!--pages/receiveInvite/receiveInvite.wxml-->
+<view class='receive_box'>
+  <image class='receive_bg' src='../../images/my/receive.png'>
+    <image class='head_img' src='{{inviteMessage.headImg}}'></image>
+    <view class='by_share'>来自{{inviteMessage.userName}}的分享</view>
+    <view class='receive_money'>
+      <view class='left'>奖学金</view>
+      <view class='right'><text>¥</text>{{inviteMessage.registerMoney/100}}</view>
+    </view>
+    
+  </image>
+  <!--1111111授权新增开始  -->
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+        <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+            <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" />
+        </view>
+    <!--1111111授权新增结束  -->
+  <view class='btn-319-44' bindtap='receiveSuccess'>领取奖学金</view>
+</view>

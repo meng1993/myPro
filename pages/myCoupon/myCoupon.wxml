@@ -1,0 +1,33 @@
+<!--pages/myCoupon/myCoupon.wxml--> 
+<view class='my_coupon'>
+  <!--样式为全局样式-->
+  <view class='my-tabBar btn_group'>
+    <view wx:for="{{tabs}}" wx:key="this" class='tabBar-item' id="{{index}}" bindtap='tabClick' style='position:relative'>
+      <text style='font-size: 32rpx;position:relative' class="tabBar-title {{activeIndex==index? 'navbar__item_on' : 'navbar__item_off'}}">{{item}}
+        <text class="tabBar-slider" style="display: {{activeIndex==index ? '' : 'none'}}"></text>
+      </text>
+    </view>
+  </view>
+  <view class='sep-375-5'></view>
+
+  <!--引入优惠券模板 -->
+  <import src='../../templates/discount/discount.wxml' />
+  <scroll-view scroll-y class='scroll_box'>
+    <!-- <navigator wx:if="{{canUse==true}}" class='coupon_rule' url='../../pages/myCouponRule/myCouponRule'>
+      <icon class='iconfont-notice icon_rule'></icon> 
+      使用规则
+    </navigator> -->
+    <view wx:if="{{canUse==true}}" class='coupon_rule' bindtap='toMyCounRule'>
+      <icon class='iconfont-notice icon_rule'></icon> 
+      使用规则
+    </view>
+    <view wx:for="{{discountList}}" wx:key="this" id="{{index}}" bindtap='chooseDiscount'>
+        <template is="discount" data="{{item, canUse}}" />
+    </view>
+    <view class='noList' wx:if="{{discountList.length == 0}}">
+      <image class='noCourseImg' src="../../images/coupon.png"></image>
+      <text class='noContentText'>您还没有优惠券</text>
+    </view>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,58 @@
+.courseDirectoryCell {
+  height: 164rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 28rpx 0 28rpx;
+  justify-content: space-between;
+}
+.cdCell-title {
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #353535;
+  /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+  /* width: 600rpx; */
+  position: relative;
+}
+.cdCell-content {
+  display: flex;
+  margin-top: 10rpx;
+}
+.cdCell-icon {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 48rpx;
+}
+.cdCell-text {
+  font-size: 26rpx;
+  margin-left: 8rpx;
+}
+.listenFree {
+  width: 88rpx;
+  height: 44rpx;
+  background: #fdeed6;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #EE7F00;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lecturer-recommend {
+  color: #353535;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 42rpx auto 24rpx 28rpx;
+}
+.specific {
+  color: #666666;
+  font-size: 28rpx;
+  padding: 0 28rpx 48rpx 48rpx;
+  margin-bottom: 128rpx;
+}
+.directory-icon {
+  font-size: 48rpx;
+  color: #999;
+}

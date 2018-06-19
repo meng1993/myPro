@@ -1,0 +1,37 @@
+<template name="courseDirectoryCell">
+    <view class='courseDirectoryCell'>
+        <view>
+            <view style='display: flex;align-items: center;'>
+                <icon wx:if="{{item.audioPlaying}}" class='iconfont-playing' style='margin-right: 20rpx;color:#EE7F00'></icon>
+                <view wx:if="{{item.audioPlaying}}" class="cdCell-title" style="color:  #EE7F00">{{item.cateName }}
+                </view>
+                <view wx:else class="cdCell-title" style="color: {{ item.isFree==1? '#353535' : item.isLastStudy==1?'#353535': '#999999'}}">{{item.cateName }}
+                </view>
+            </view>
+
+            <view class='cdCell-content'>
+                <icon class='iconfont-time cdCell-icon'>
+                    <text class="cdCell-text">{{item.duration }}</text>
+                </icon>
+                <icon wx:if="{{!downList}}" class='iconfont-play cdCell-icon'>
+                    <text class="cdCell-text">{{item.playNum }}次</text>
+                </icon>
+                <icon wx:if="{{downList}}" class='iconfont-play cdCell-icon'>
+                    <text class="cdCell-text">{{item.playNum }}KB</text>
+                </icon>
+            </view>
+        </view>
+
+        <icon wx:if="{{!downList}}" style="color: {{item.isLastStudy==1? '#353535' : '#999999'}}" class="directory-icon {{item.isFree == 1? '' : (item.isLastStudy==1? '':'iconfont-lock-in')}}"></icon>
+        <view wx:if="{{item.isFree==1}}" class='listenFree'>试听</view>
+
+        <!-- <icon  style="color: {{item.isFree==0? '#353535' : '#999999'}}" class="directory-icon {{item.isFree==0? 'iconfont-download':'iconfont-lock-in'}}"></icon>  -->
+        <image data-cateId='{{item.cateId}}' wx:if="{{downList}}" src='../../images/study/btn_delete.png' style='width:32rpx;height:32rpx;' catchtap='deleteCate'></image>
+    </view>
+    <view class='sep-375-href'></view>
+</template>
+
+<template name="courseRecommend">
+    <view class='lecturer-recommend'>· 讲师介绍</view>
+    <view class='specific'>的发生的上的飞机阿斯顿阿斯顿发射点开发阿斯顿发射点的发生的上的飞机阿斯顿阿斯顿发射点开发阿斯顿发射点的发生的上的飞机阿斯顿阿斯顿发射点开发阿斯顿发射点的发生的上的飞机阿斯顿阿斯顿发射点开发阿斯顿发射点开发手动阀手动阀</view>
+</template>

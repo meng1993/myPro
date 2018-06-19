@@ -1,0 +1,11 @@
+<!--pages/testResult/testResult.wxml-->
+<view class='test_result'>
+  <image class='result_img' src='../../images/study/result_pass.png'></image>
+  <view class='result_text'>通过</view>
+  <view class='result_describe'>
+  恭喜您！已通过课程学习测评，您将获得地心引力和新媒体行业专家顾问团联合认证颁发的课程结业证书1份，完善并提交个人简历，您还将获得地心引力免费提供的求职帮助。
+  </view>
+  <view class='btn_big btn_vitae'>提交个人简历</view>
+  <view class='btn_big btn_diploma'>我只领取证书</view>
+  <view class='bottom'>——  合作企业  ——</view>
+</view>

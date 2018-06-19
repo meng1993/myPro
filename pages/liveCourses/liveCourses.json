@@ -1,0 +1,7 @@
+
+{
+    "usingComponents": {
+        "phoneToast": "../../components/phoneToast/phoneToast"
+    },
+    "navigationBarTitleText": "直播课程"
+}

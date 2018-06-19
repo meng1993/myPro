@@ -1,0 +1,102 @@
+/* pages/myCoupon/myCoupon.wxss */
+.my_coupon {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+.discount-img {
+  width: 670rpx;
+  height: 220rpx;
+  margin: 28rpx 40rpx 0;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.10);
+  position: relative;
+}
+.discount-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 614rpx;
+  height: 148rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28rpx;
+  color: #fff;
+}
+.discount-left {
+  display: flex;
+  flex-direction: column;
+}
+.noColor {
+  background-color: rgba(0, 0, 0, 0);
+}
+.discount-title {
+  font-size: 32rpx;
+  margin-bottom: 4rpx;
+  font-weight: bold;
+}
+.discount-indate {
+  font-size: 24rpx;
+}
+.discount-right {
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.discount-explain {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 614rpx;
+  height: 72rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 72rpx;
+  padding: 0 28rpx;
+}
+.scroll_box {
+   height: 1100rpx; 
+}
+.scroll_box .coupon_rule {
+  position: relative;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 40rpx 540rpx;
+  font-size: 28rpx;
+  color: #999999;
+  text-align: right;
+  background-color: #f2f2f2;
+}
+.scroll_box .coupon_rule .icon_rule {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*新增*/
+
+.noCourseImg{
+  width: 204rpx;
+  height: 116rpx;
+}
+
+.noList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-top: 272rpx;
+}
+.noContentText{
+  font-size:28rpx;
+  color:#999;
+  text-align:center;
+  margin-top:34rpx;
+}
+
+.to_buy{
+  margin-top: 40rpx;
+  background-color:  #EE7F00;
+  color: #FFFFFF;
+}

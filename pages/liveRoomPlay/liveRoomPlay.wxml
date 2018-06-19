@@ -1,0 +1,20 @@
+<view class='my-player-view' style="height: 468rpx">
+    <live-player style="height: 506rpx" id="livePlayer" class="my-player" src="{{src}}" mode="{{mode}}" autoplay="{{autoplay}}" muted="{{muted}}" orientation="{{orientation}}" object-fit="{{objectFit}}" bindstatechange="statechange"
+        bindfullscreenchange="fullscreenchange" bindnetstatus="netstatus" binderror="error">
+        <cover-view class='push-operate'>
+            <cover-view class='operate-left'>
+                <cover-view bindtap='play' wx:if="{{pulling==false}}" class='liveSwitchImg'>
+                    <cover-image class=' switch' src='../../images/livePause.png'></cover-image>
+                </cover-view>
+                <cover-view wx:else bindtap='pause' class='liveSwitchImg'>
+                    <cover-image class=' switch' src='../../images/livePlay.png'></cover-image>
+                </cover-view>
+                <cover-view class='currentTime'>00:30</cover-view>
+            </cover-view>
+            <cover-view bindtap='fullscreen' class='fullView'>
+                <cover-image class='amplify' src='../../images/amplify.png'></cover-image>
+            </cover-view>
+
+        </cover-view>
+    </live-player>
+</view>

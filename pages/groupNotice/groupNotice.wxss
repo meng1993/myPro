@@ -1,0 +1,23 @@
+/* pages/groupNotice/groupNotice.wxss */
+
+.groupNotice {
+    height: 1158rpx;
+    padding: 48rpx 28rpx 0;
+}
+
+.noticeTitle {
+    font-size: 36rpx;
+    color: #353535;
+    font-weight: bold;
+    padding-bottom: 6rpx;
+}
+
+.noticeContent {
+    font-size: 32rpx;
+    color: #353535;
+    letter-spacing: 0;
+}
+
+.smallTitle{
+    margin: 52rpx 0 16rpx;
+}

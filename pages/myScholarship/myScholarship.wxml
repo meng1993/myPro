@@ -1,0 +1,43 @@
+<!--pages/myScholarship/myScholarship.wxml-->
+<view class='scholarship'> 
+  <view class='top_one'>
+    <view class='top_one_left top_common'>
+      <text class='text_money'><text style='font-size:24rpx;'>¥</text>{{money/100}}</text>
+      <text class='text_describe'>满100元可提现</text>
+    </view>
+    <view class='top_one_right top_common'>
+      <image class='scholarship' src='../../images/my/scholarship.png'></image>
+    </view>
+  </view>
+
+  <view class='top_two'>
+    <navigator class='btn_tixian btn_common' url="../../pages/myScholarshipWithdraw/myScholarshipWithdraw?money={{money}}">我要提现</navigator>
+  </view>
+
+  <view class='sep-375-10'></view>
+
+  <!--样式为全局样式-->
+  <view class='my-tabBar'>
+    <view wx:for="{{tabs}}" wx:key="this" class='tabBar-item' id="{{index}}" bindtap='tabClick' style='position:relative'>
+      <text style='font-size: 32rpx;position:relative' class="tabBar-title {{activeIndex==index? 'navbar__item_on' : 'navbar__item_off'}}">{{item}}
+				<text class="tabBar-slider" style="display: {{activeIndex==index ? '' : 'none'}}"></text>
+      </text>
+    </view>
+  </view>
+
+  <!--引入自定义课程模板 -->
+		<import src = '../../templates/courseCell/courseCell.wxml' />
+     <scroll-view scroll-y style="height:660rpx;" bindscrolltolower="bindDownLoad" bindscrolltoupper="refresh" wx:if="{{courseCellList.length !== 0}}"> 
+      <view wx:for="{{courseCellList}}" wx:key="this" id="{{index}}">
+        <template  is="courseCell" data="{{item, Index, scholarship}}" />
+      </view>
+     </scroll-view>
+    <view class='noList' wx:if="{{courseCellList.length == 0}}">
+      <image class='noCourseImg' src="../../images/courseNo.png"></image>
+      <text class='noContentText'>暂无可推广赚钱的课程</text>
+    </view>
+
+ </view>  
+
+
+

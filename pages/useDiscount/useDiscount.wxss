@@ -1,0 +1,3 @@
+/* pages/useDiscount/useDiscount.wxss */
+@import '../../templates/blankPage/blankPage.wxss';
+@import '../../templates/discount/discount.wxss';

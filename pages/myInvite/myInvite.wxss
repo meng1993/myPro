@@ -1,0 +1,79 @@
+/* pages/myInvite/myInvite.wxss */
+.my_invite {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.my_invite .invite_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.my_invite .invite_describe {
+  width: 100%;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  margin-top: 250rpx;
+  background: transparent;
+  font-size: 32rpx;
+  color: #FFFFFF;
+}
+.my_invite .success_invite {
+  display: flex;
+  width: 690rpx;
+  height: 150rpx;
+  background-color: red;
+  margin-top: 220rpx;
+  margin-left: 28rpx;
+}
+.my_invite .success_invite .invite_common {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 80rpx;
+  color: #353535;
+}
+.my_invite .success_invite .invite_left {
+  border-right: 1px dashed #CECECE;
+}
+.my_invite .success_invite .invite_common > view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  line-height: 75rpx;
+}
+.my_invite .success_invite .invite_common .title {
+  font-size: 28rpx;
+  color: #999999;
+}
+.my_invite .btn_invite {
+  margin-top: 60rpx;
+}
+.my_invite .invite_warn {
+  width: 638rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  margin-left: 56rpx;
+  color: #999999;
+  margin-top: 40rpx;
+}
+.my_invite .img_invite {
+  width: 248rpx;
+  height: 44rpx;
+  margin: 50rpx 250rpx 18rpx;
+}
+.my_invite .bottom_message {
+  width: 640rpx;
+  margin-left: 55rpx;
+  font-size: 28rpx;
+  color: #666666;
+}

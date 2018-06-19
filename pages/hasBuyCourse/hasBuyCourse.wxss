@@ -1,0 +1,129 @@
+ /* @import '../../templates/courseCell/courseCell.wxss';  */
+.btn_group{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100rpx;
+}
+.btn_group .btn_common{
+  position: relative;
+  width: 140rpx;
+  height: 66rpx;
+   float: left; 
+  text-align: center;
+  line-height: 66rpx;
+  margin: 17rpx 25rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.btn_group .active{
+  color: #EE7F00;
+}
+.btn_group .btn_common image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 140rpx;
+  height: 66rpx;
+} 
+ .btn_group .btn_common .btn_type{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx; 
+  left: 0;
+  top:0;
+  line-height: 58rpx;
+}  
+.list_content{
+  margin-top: 100rpx;
+}
+
+
+ .rec-item {
+  padding: 0 28rpx;
+  display: flex;
+}
+.item-left {
+  width: 164rpx;
+  height: 214rpx;
+}
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rpx auto 4rpx 26rpx;
+}
+.item-title {
+  color: #353535;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item-content {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.item-icon {
+  color: #999;
+  font-size: 28rpx;
+}
+.item-time {
+  color: #999;
+  font-size: 24rpx;
+}
+.item-icon-text {
+  margin: 0 30rpx 0 8rpx;
+}
+.item-price {
+  font-size: 32rpx;
+  color: #ec3131;
+  margin-top: 6rpx;
+} 
+.loading{
+  width:100%;
+  height:30rpx;
+  text-align:center;
+  line-height:30rpx;
+  font-size:24rpx;
+  color:#999999;
+}
+
+/*czy新增*/
+ .item-content {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+	width: 464rpx;
+} 
+
+/*新增*/
+
+.noCourseImg{
+  width: 202rpx;
+  height: 138rpx;
+}
+
+.noList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-top: 272rpx;
+}
+.noContentText{
+  font-size:28rpx;
+  color:#999;
+  text-align:center;
+  margin-top:34rpx;
+}
+
+.to_buy{
+  margin-top: 40rpx;
+  background-color:  #EE7F00;
+  color: #FFFFFF;
+}

@@ -1,0 +1,21 @@
+<!--pages/myInvite/myInvite.wxml--> 
+
+<view class='my_invite'>
+  <image class='invite_bg' src='../../images/my/my_invite.png'></image>
+  <view class='invite_describe'>成功邀请一个学员可得{{inviteMessage.inviteMoney/100}}元奖学金</view>  
+  <view class='success_invite'>
+    <view class='invite_common invite_left'>
+      <view class='title'>成功邀请(人）</view>
+      <view>{{inviteMessage.inviteCount}}</view>
+    </view>
+    <view class='invite_common'>
+      <view class='title'>获得奖励(元）</view>
+      <view>{{inviteMessage.totalInviteMoney/100}}</view>
+    </view>
+  </view>
+  <!-- <view class='btn-319-44 btn_invite'>马上邀请</view> -->
+  <button class='btn-319-44 btn_invite' open-type="share">马上邀请</button>
+  <view class='invite_warn'>赚取的奖学金大于200时，可申请提现</view>
+  <image class='img_invite' src='../../images/my/invite_describe.png'></image>
+  <view class='bottom_message'>邀请的好友成为学员，你将获得10元奖学金，若你邀请的学员购买了课程，你还将获得他购买课程实付金额 50% 的学费奖励。</view>
+</view>

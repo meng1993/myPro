@@ -1,0 +1,23 @@
+<view class="offline_voice"> 
+  <view class="btn_group {{item.active==true ? 'active' : ''}}" bindtap="click" data-current='{{item.current}}' wx:for="{{btnGroup}}">
+    <view class="{{item.active==true ? 'active' : ''}}"></view>
+    {{item.text}}
+  </view>
+</view>
+
+<!--引入自定义课程模板 -->
+<import src='../../templates/courseCell/courseCell.wxml' />
+<!--已离线的音频-->
+<view class='list_content 11111' wx:if="{{offline == true}}">
+  <view wx:for="{{offlineList}}" wx:key="this" id="{{item.courseId}}" bindtap='toCourseDetails'>
+    <template is="courseCell" data="{{item, playNum, offline}}" />
+  </view>
+</view>
+
+<!--离线中的音频-->
+<view class='list_content 22222' wx:if="{{offline_ing == true}}">
+  <view wx:for="{{offlineIngList}}" wx:key="this" id="{{index}}">
+    <template is="courseCell" data="{{item, playNum, offline_ing}}" />
+  </view>
+  <view bindtap='downLoad'>下载</view>
+</view>

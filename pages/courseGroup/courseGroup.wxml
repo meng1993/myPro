@@ -1,0 +1,91 @@
+<view class='customLoading' wx:if="{{groupData == ''}}">
+
+</view>
+<view class='group' wx:else>
+<!-- 返回首页按钮 -->
+    <image hidden="{{shareMe!= 'true'}}" class='backtoIndex' src='../../images/backtoIndex.png' bindtap='toIndex'></image>
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+    <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+        <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" />
+    </view>
+    <view class='group-top'>
+        <view class='circle circle-left' style="top: {{groupData.groupStatus==1 ? 426+'rpx' : 231+'rpx'}}"></view>
+        <view class='circle circle-right' style="top: {{groupData.groupStatus==1 ? 426+'rpx' : 231+'rpx'}}"></view>
+        <view style='background: rgba(0, 0, 0, 0);'>
+            <import src='../../templates/courseCell/courseCell.wxml' />
+            <template is="groupCell" data="{{groupData}}" />
+        </view>
+        <view wx:if="{{groupData.groupStatus ==1}}" class='group-countUp'>
+            <text class='countUp-text'>剩余参团时间</text>
+            <span class='countUp-time'>
+                <text class='countUp-unit'>{{countDownArr[1]}}</text> :
+                <text class='countUp-unit'>{{countDownArr[2]}}</text> :
+                <text class='countUp-unit'>{{countDownArr[3]}}</text>
+            </span>
+        </view>
+        <view class='group-start' wx:if="{{groupData.groupStatus ==1}}">
+            <view wx:if="{{groupData.haveJoin}}" class='group-balance'>您已{{groupData.leader? '发起拼团':'成功参团'}}，还差
+                <text class='group-people'>{{groupData.remainderNum}}</text>人
+            </view>
+            <view wx:else class='group-balance'> 只差
+                <text class='group-people'>{{groupData.remainderNum}}</text>名额，赶紧来拼团吧
+            </view>
+            <button wx:if="{{groupData.haveJoin}}" open-type='share' bindtap='invite' class='btn-319-44'>立即邀请好友参团</button>
+            <view wx:else bindtap='joinGroup' class='btn-319-44'>参与拼团</view>
+            <view class='group-notice' bindtap='groupNotice'>
+                <icon class='notice-icon iconfont-notice'></icon>
+                拼团须知
+            </view>
+        </view>
+
+        <!--  // 拼团状态groupStatus: 1=进行中  2=已完成  3=失效  4=未付款  -->
+        <view wx:if="{{groupData.groupStatus ==2}}">
+            <view wx:if="{{groupData.haveJoin==true}}">
+                <view class='group-success-text'>
+                    <image class='success-icon' src='../../images/success.png'></image>拼团成功!
+                </view>
+                <view class='group-fail'>
+                    <text style='color: #EE7F00'>{{groupData.joinNum}}</text>人参团/
+                    <text style='color: #EE7F00'>{{groupData.peopleLimit}}</text>人成团</view>
+                <view bindtap='toStudy' class='btn-319-44' style='margin: 0rpx auto 32rpx'>马上去学习</view>
+            </view>
+             <view wx:else>
+                <view class='group-fail'>该团已拼满 <text class='group-people' style='color: #EE7F00'>{{groupData.peopleLimit}}</text>人，自己发起拼团</view>
+                <view bindtap='groupClick' class='btn-319-44' style='margin: 0rpx auto 32rpx'>发起拼团</view>
+            </view> 
+
+
+            <view class='group-notice' bindtap='groupNotice'>
+                <icon class='notice-icon iconfont-notice'></icon>
+                拼团须知
+            </view>
+        </view>
+
+        <view wx:if="{{groupData.groupStatus ==3}}">
+            <view class='group-success-text' style='color: #EC3131;'>
+                <image class='success-icon' src='../../images/failure.png'></image>拼团失败!
+            </view>
+            <view class='group-fail'>付款金额将在24小时内自动退还</view>
+            <view bindtap='sellPriceClick' class='btn-319-44'>不拼了，原价￥{{groupData.sellPrice/100}}购买</view>
+            <view bindtap='groupClick' class='btn-319-44 group-buyAgain'>再次开团￥{{groupData.groupPrice/100}}</view>
+            <view class='group-notice' bindtap='groupNotice'>
+                <icon class='notice-icon iconfont-notice'></icon>
+                拼团须知
+            </view>
+        </view>
+
+    </view>
+
+    <view class='group-bottom'>
+        <view class='circle-member'></view>
+        <image class='group-go-icon' src='../../images/go-icon.png'></image>
+        <text class='allMember'>拼团成员</text>
+        <view style='background: rgba(0, 0, 0, 0);' wx:for="{{memberList}}" wx:key="this">
+            <import src='../../templates/group-temp/group-temp.wxml' />
+            <template is="groupMember" data="{{item}}" />
+            <view wx:if="{{index!=memberList.length-1}}" class='sep-319-href'></view>
+        </view>
+    </view>
+</view>

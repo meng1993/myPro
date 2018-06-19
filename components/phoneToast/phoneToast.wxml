@@ -1,0 +1,9 @@
+<view class='loginToast' catchtap='haha'>
+    <view class='guanbiView' bindtap='guanbi'>
+        <icon class='iconfont-guanbi delete'></icon>
+    </view>
+    <!-- <image class='delete' src=""></image> -->
+    <view class='text'>登录或注册地心引力</view>
+    <button open-type="getPhoneNumber" catchgetphonenumber="getPhoneNumber" class='btn active'>微信账号快速登录</button>
+    <view class='btn' catchtap='phoneVerity'>手机号验证登录</view>
+</view>

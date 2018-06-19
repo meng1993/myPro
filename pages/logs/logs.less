@@ -1,0 +1,77 @@
+@import '../../weui.wxss';
+
+.wrap {
+  position: relative;
+  float: left;
+  height: 450px;
+  margin: 30px;
+  border: 1px solid #000;
+}
+.burl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* clip:rect(180px,280px,380px,0px); */
+  overflow:hidden;
+  filter: blur(10px);
+  z-index: 10;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+}
+
+.box {
+  width: 256px; height: 191px;
+  background: url(http://img.zcool.cn/community/01058a556895750000012716d39e4e.jpg@3000w_1l_2o_100sh.jpg) no-repeat;
+  position: relative;
+  /* overflow: hidden; */
+}
+.drag {
+  width: 256px; height: 30px;
+  background: inherit;
+  filter: blur(10px);
+  position: absolute;
+  overflow: hidden;
+  bottom:0;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+
+}
+
+
+
+.ctn {
+  width: 400px;
+  height: 180px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+.cover {
+  width: 100%;
+  height: 50px;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.fa{
+  width: 100%;
+  height: 170px;
+  padding: 20px 0px;
+  background-color: cadetblue;
+}
+.son{
+  width: 100%;
+  height: 20px;
+  padding: 30px 0px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}

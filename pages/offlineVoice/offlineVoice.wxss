@@ -1,0 +1,73 @@
+.offline_voice{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100rpx;
+  background: red;
+  display: flex;
+}
+.offline_voice .btn_group{
+  position: relative;
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #353535;
+}
+.offline_voice .active{
+  color:#EE7F00;
+}
+.offline_voice .btn_group .active{
+  position: absolute;
+  width: 46rpx;
+  height: 6rpx;
+  background-color: #EE7F00 ;
+  
+  left: 50%;
+  bottom:0;
+  margin-left: -23rpx;
+}
+.list_content{
+  margin-top: 100rpx;
+}
+.rec-item {
+  padding: 0 28rpx;
+  display: flex;
+}
+.item-left {
+  width: 164rpx;
+  height: 214rpx;
+}
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rpx auto 4rpx 26rpx;
+}
+.item-title {
+  color: #353535;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item-content {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.item-icon {
+  color: #999;
+  font-size: 28rpx;
+}
+.item-time {
+  color: #999;
+  font-size: 24rpx;
+}
+.item-icon-text {
+  margin: 0 30rpx 0 8rpx;
+}
+.item-price {
+  font-size: 32rpx;
+  color: #ec3131;
+  margin-top: 6rpx;
+}

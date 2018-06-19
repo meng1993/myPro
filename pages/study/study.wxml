@@ -1,0 +1,52 @@
+<view> 
+     <!-- <view class='study-top'>
+        <image bindtap='hasBuy' class='study-buy' src='../../images/course.png'></image>
+         <image bindtap='offline' class='study-buy' src='../../images/offline.png'></image> 
+    </view>
+    <view class='sep-375-10'></view>
+    <view class='study-recently'>最近学习</view>  -->
+     <!-- 登陆-->
+    <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+        <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" bind:hiddenToast="hiddenLogin" />
+    </view>
+
+    <!-- 授权弹框-->
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+    <view wx:if="{{studyList.length != 0}}" wx:for="{{studyList}}" data-courseId="{{item.courseId}}" bindtap='toCourseDetails'>
+        <view class='study-cell'>
+            <image wx:if="{{item.punchCard}}" class='hasClock' src='../../images/clock.png'></image>
+            <image class='item-left' src='{{item.smallCover}}'></image>
+            <view class='item-right'>
+                <view>
+                    <view class='item-title'>{{item.mainTitle}}</view>
+                    <view class='study-contentcell' style='margin-top:50rpx;'>
+                        <icon class='iconfont-headsetx study-icon'></icon>
+                        <view class='item-time'>{{item.cateName}}</view>
+                    </view>
+                    <view class='study-contentcell' style='margin-top:20rpx;'>
+                        <icon class='iconfont-time study-icon'></icon>
+                        <!-- <text class='item-time'>{{item.hourNum}}课时/{{item.studyTime/60}}分钟</text> -->
+                        <text class='item-time'>{{item.time}}</text>
+                    </view>
+                </view>
+                <view style='display: flex;'>
+                    <!--！！！！！！！！！！！！！！！！打卡、测评、领证、瓜分奖金、集赞退学费入口关闭不要删除-->
+                    <!-- <view class='study-punchCard' data-courseId="{{item.courseId}}" catchtap='toCollect'>集赞退学费</view> -->
+                    <!-- <view data-todayIsClock="{{item.isTodayClock==true}}" data-courseId="{{item.courseId}}" class="study-punchCard {{item.isTodayClock?'appraisal':''}}" catchtap='punchClock'>打卡</view>
+                    <view wx:if="{{item.isAllowTest==true}}" data-courseId="{{item.courseId}}" class='study-punchCard appraisal' bindtap='toTest'>测评</view>
+                    <view wx:if="{{item.bonusMoney}}" class='study-punchCard' style='padding: 0 8rpx'>已瓜分￥{{item.bonusMoney/100}}</view>
+                    <view wx:if="{{item.punchCard}}" class='study-punchCard'>领证</view> -->
+                </view>
+            </view>
+        </view>
+        <view class='index-sep'></view>
+    </view>
+
+    <view class='noList' wx:if="{{studyList.length == 0}}">
+        <image class='noCourseImg' src="../../images/courseNo.png"></image>
+        <text class='noContentText'>暂时没有相关课程</text>
+    </view>
+
+</view>

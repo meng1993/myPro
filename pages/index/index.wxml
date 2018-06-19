@@ -1,0 +1,73 @@
+
+
+
+   <!-- 登陆-->
+    <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+        <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" bind:hiddenToast="hiddenLogin" />
+    </view>
+
+    <!-- 授权弹框-->
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+
+    <!-- 悬浮播放按钮-->
+    <view bindtap="toplay" class='play-status' hidden='{{playStatus==2}}'>
+        <image bindtap="toplay" class='play-img' src="{{playImg}}">
+            <view class='play-view' style='background-color: none'>
+                <icon class="{{playStatus ==1? 'iconfont-playing' : 'iconfont-play1'}} play-icon"></icon>
+            </view>
+        </image>
+    </view>
+
+<view wx:if="{{courseCellList!=''&&courseCellList!='loading'}}" class="page" class="{{loginShow||authorization? 'isScroll' : ''}}">
+    <!-- 轮播图-->
+    <view class='header-top-div'>
+          <swiper bindchange="intervalChange" autoplay="true" circular="true" interval="3000" duration="500" previous-margin="0px" next-margin="0px" style='height: 292rpx;width: 750rpx' previous-margin="28rpx" next-margin="28rpx">
+                <swiper-item class="mySwiperItem" style='height: 292rpx;width: 658rpx'  wx:for="{{bannerList}}" wx:key="this">
+                    <image bindtap='clickBanner' data-isHomeUrl="{{item.isHomeUrl}}" data-adClickUrl="{{item.adClickUrl}}" class="header-top" src='{{item.adImgUrl}}' style="height: {{index!=swiperIndex? '248rpx' : '292rpx'}};background: #F0F0F0"></image>
+                </swiper-item>
+        </swiper>
+        <!-- 轮播图的点点-->
+        <view class='indicator-dots'>
+            <view class='bannerActive' wx:for="{{bannerList}}" style="width: {{index == swiperIndex? '24rpx' : '12rpx'}};opacity: {{index==swiperIndex? '0.95':'0.3'}}" wx:key="this"></view>
+        </view>
+    </view>
+    <!-- 课程类型icon-->
+    <view class='"icon-back"'>
+        <view id="{{index}}" class="icon-unit" bindtap='toTapIcon' wx:for="{{iconItems}}" wx:key="this">
+            <image class="header-icon" src="{{item.src}}"></image>
+            <text class='icon-text'>{{item.name}}</text>
+        </view>
+    </view>
+    <!-- <view class='sep-375-5'></view>
+    <view class='index-live'>
+        <view class='live-countDown'>
+            <image class='index-live-img' src='../../images/live-two.png'></image>
+            <view class='countUp-time'>
+                <text class='countUp-unit'>{{countDownArr[0]||'00'}}</text>:
+                <text class='countUp-unit'> {{countDownArr[1]||'00'}}</text>:
+                <text class='countUp-unit'>  {{countDownArr[2]||'00'}}</text>:
+                <text class='countUp-unit'>  {{countDownArr[3]||'00'}}</text>
+            </view>
+        </view>
+        <view class='index-order'>{{liveData.studyNum }}人预约</view>
+    </view> -->
+    <!-- <view class='index-adver' bindtap='toLiveCourses'>
+        <view>
+            <view class='adver-top'>{{liveData.mainTitle}}</view>
+            <view class='adver-bottom'>{{liveData.secondTitle }}</view>
+        </view>
+        <icon class='iconfont-next'></icon>
+    </view> -->
+    <view class='sep-375-href'></view>
+    <view>
+        <view class='recommend'>精品推荐</view>
+        <!--引入自定义课程模板 -->
+        <import src='../../templates/courseCell/courseCell.wxml' />
+        <view wx:for="{{courseCellList}}" wx:key="this" id="{{index}}" bindtap='toCourseDetails'>
+            <template is="courseCell" data="{{item, Index}}" />
+        </view>
+
+    </view>
+</view>

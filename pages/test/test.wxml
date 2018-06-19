@@ -1,0 +1,99 @@
+<view class="test">
+  <!--头部-->
+  <view class='test_top'>
+    <text class='test_name'>社群构建的18个核心秘密</text>
+    <view class='test_progress'>
+      <text class='current_num'>{{titleNum+1}}</text>
+      <text class='total_num'>/{{titleTotal}}</text>
+    </view>
+  </view>
+
+  <!--单选题模块-->
+  <block wx:if="{{titleType == 0}}">
+    <view class='test_type'>单选题</view>
+    <view class='ques_ans'>
+      <text class='question'>安迪问妈妈为什么没有外婆和奶奶，妈妈怎么回答他的？</text>
+      <radio-group class="answer" bindchange="radioChange" data-testId="{{items.testId}}">
+        <!-- <label class="label" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>
+          <text>{{item.value}}</text>
+        </label> -->
+        <label class="label">
+          A、
+          <radio value="A" checked="{{checked}}"/>
+          <text>{{items.optionA}}</text>
+        </label>
+        <label class="label">
+          B、
+          <radio value="B" checked="{{checked}}"/>
+          <text>{{items.optionB}}</text>
+        </label>
+        <label class="label">
+          C、
+          <radio value="C" checked="{{checked}}"/>
+          <text>{{items.optionC}}</text>
+        </label>
+        <label class="label">
+          D、
+          <radio value="D" checked="{{checked}}"/>
+          <text>{{items.optionD}}</text>
+        </label>
+      </radio-group>
+    </view> 
+  </block>
+  <!--多选题模块-->
+  <block wx:else>
+    <view class='test_type'>多选题</view>
+    <view class='ques_ans'>
+      <text class='question'>安迪问妈妈为什么没有外婆和奶奶，妈妈怎么回答他的？</text>
+      
+      <checkbox-group class="answer" bindchange="checkboxChange" data-testId="{{items.testId}}">
+        <!-- <label class="label" wx:for="{{items}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+          <text>{{item.value}}</text>
+        </label> -->
+        <label class="label">
+          A、
+          <checkbox value="A" checked="{{checked}}"/>
+          <text>{{items.optionA}}</text>
+        </label>
+        <label class="label">
+          B、
+          <checkbox value="B" checked="{{checked}}"/>
+          <text>{{items.optionB}}</text>
+        </label>
+        <label class="label">
+          C、
+          <checkbox value="C" checked="{{checked}}"/>
+          <text>{{items.optionC}}</text>
+        </label>
+        <label class="label">
+          D、
+          <checkbox value="D" checked="{{checked}}"/>
+          <text>{{items.optionD}}</text>
+        </label>
+        
+      </checkbox-group>
+
+    </view>
+  </block>
+
+
+  <!--下边按钮(判断不是最后一题时候的按钮)-->
+  <!--不是最后一题时候要判断是否是第一题（not_btn为true或false）-->
+  <block wx:if="{{lastTitle == false}}">
+    <view class='btn_box'>
+      <view class="btn_common {{firstTitle==true?'not_btn':''}}" bindtap="prevTitle">上一题</view>
+      <text class='btn_common' bindtap='nextTitle'>下一题</text>
+    </view>
+  </block>
+
+  <!--下边按钮（是最后一题时候的按钮）-->
+  <block wx:else>
+    <view class='btn_box' style='height:460rpx;'>
+      <view class='btn_common last_title' bindtap="prevTitle">上一题</view>
+      <text class='btn_common btn_submit' bindtap='btnSubmit'>提交测评</text>
+    </view>
+  </block>
+
+</view>

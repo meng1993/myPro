@@ -1,0 +1,7 @@
+/* pages/appoint/appoint.wxss */
+@import '../editMessage/editMessage';
+
+.appoint{
+	height: auto;
+	position: initial;
+}

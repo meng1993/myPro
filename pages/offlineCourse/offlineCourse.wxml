@@ -1,0 +1,13 @@
+<!--pages/offlineCourse/offlineCourse.wxml-->
+
+<view wx:if="{{list=='loading'}}">
+</view>
+<view wx:if="{{list!=''&&list!='loading'}}">
+    <view class='offlineCourse' wx:for="{{list}}" wx:key="this" bindtap='courseRecommend' id="{{index}}">
+        <image class='offlineCourse-img' src='{{item.coverUrl}}'></image>
+    </view>
+</view>
+<view class='noList' wx:if="{{list==''}}">
+    <image class='noCourseImg' src="../../images/courseNo.png"></image>
+    <text class='noContentText'>暂时没有相关课程</text>
+</view>

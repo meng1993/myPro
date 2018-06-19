@@ -1,0 +1,60 @@
+.iconfont-guanbi:before {
+    content: "\e89a";
+}
+
+.loginToast {
+    width: 386rpx;
+    height: 286rpx;
+    margin-top: 300rpx;
+     margin-left: 122rpx; 
+    border-radius: 4px;
+    padding: 54rpx 60rpx;
+    text-align: center;
+    position: relative;
+}
+
+.guanbiView {
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+     width: 52rpx;
+    height: 59rpx; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    font-size: 12px;
+    color: #999;
+}
+
+.text {
+    font-size: 28rpx;
+    color: #353535;
+    width: 386rpx;
+    margin-bottom: 38rpx;
+    position: relative;
+}
+
+.btn {
+    background: #f8f8f8;
+    border: 1px solid rgba(5, 5, 5, 0.10);
+    border-radius: 4px;
+    margin-bottom: 32rpx;
+    width: 386rpx;
+    height: 88rpx;
+    font-size: 32rpx;
+    color: #666;
+    line-height: 84rpx;
+}
+
+.active {
+    background: #ee7f00;
+    color: #fff;
+}

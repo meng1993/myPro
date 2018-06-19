@@ -1,0 +1,76 @@
+/* pages/inviteCard/inviteCard.wxss */
+.card_box{
+  position: fixed;
+  width: 694rpx;
+  height: 100vh;
+  padding: 0 28rpx; 
+  background-color: #f8f8f8; 
+  z-index: 9;
+}
+.card_box .main_text{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 44rpx;
+  color: #353535;
+  background-color: #f8f8f8; 
+  padding-top: 24rpx
+}
+.card_box .main_describe{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #999999;
+  background-color: #f8f8f8; 
+  margin: 8rpx 0 40rpx;
+}
+.card_box .posters{
+  position: relative;
+  width: 536rpx;
+  height: 844rpx;
+  margin-left: 79rpx;
+  margin-bottom: 60rpx;
+  z-index: 99;
+}
+.card_box .Qr_cord{
+  position: absolute;
+  width: 148rpx;
+  height: 148rpx; 
+  right: 18rpx;
+  bottom: 14rpx;
+  border-radius: 50%;
+}
+.card_box .share_header_img{
+  position: absolute;
+  width: 72rpx;
+  height: 72rpx;
+  left: 26rpx;
+  top: 12rpx;
+  border-radius: 50%;
+}
+.card_box .share_name{
+  position: absolute;
+  width: 200rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  left: 118rpx;
+  top: 12rpx;
+  font-size: 32rpx;
+  color: #353535;
+}
+.recommend{
+  float: left;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #353535;
+}
+.recommend::after{
+  border: none
+}
+.get_posters{
+  float: right;
+  background-color: #EE7F00;
+  font-size: 32rpx;
+  color: #fff;
+}

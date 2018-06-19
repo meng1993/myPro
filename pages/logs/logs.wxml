@@ -1,0 +1,17 @@
+//触发弹出层：bindtap="show"
+ <view class="fenxiang-box">
+    <image bindtap="show" src="/image/fenxiang-btn.png" class="fenxiang-btn"></image>
+  </view>
+
+
+//弹出层内容，其中的“我知道”中绑定让弹出层消失的函数：bindtap="hide"
+<view class="modal-box" hidden="{{flag}}" bindtap="hide">
+
+    <view class="modal-body">
+
+      <view class="modal-content">
+        <image src="/image/1.png" class="fenxiang"></image>
+        <button class="knowBtn" bindtap="hide">我知道了</button>
+     </view>
+    </view>
+  </view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "phoneToast": "../../components/phoneToast/phoneToast",
+    "loginToast": "../../components/loginToast/loginToast"
+  },
+  "navigationBarTitleText": "邀请有奖"
+}

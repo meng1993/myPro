@@ -1,0 +1,41 @@
+<import src='../../templates/courseDirectoryCell/courseDirectoryCell.wxml' />
+<view wx:if="{{playData==''}}"></view>
+<view wx:else class='play-page' style='overflow: hidden'>
+    <view class='audio-view'>
+    </view>
+    <image class='play-img' src='{{coverImg}}'></image>
+    <view class='play-title'>{{playData.sort}}、{{playData.cateName}}</view>
+    <view class='play-contentIcon'>
+        <icon class='iconfont-listx contentIcon' bindtap='playList'></icon>
+        <icon class='iconfont-text contentIcon' bindtap='audioText'></icon>
+        <button open-type='share' class='shareBtn' bindtap='share'>
+            <icon class='iconfont-share contentIcon'></icon>
+        </button>
+    </view>
+    <view class='play-slider-cell'>
+        <text class='slider-time leftTime'>{{currentTime}}</text>
+        <slider backgroundColor="e5e5e5" activeColor="#EE7F00" block-size="16" class='play-slider' bindchange="timeSliderChanged" value="{{sliderValue}}" max='{{sliderMax}}' />
+        <text class='slider-time rightTime'>{{courseDirectoryCellList[currentIndex].duration2}}</text>
+    </view>
+    <view class='play-toward-cell'>
+        <icon bindtap='playLeft' class="iconfont-backward playToward {{currentIndex==0? 'notToward':'canToward'}}"></icon>
+        <image wx:if="{{!playStatus}}" bindtap="playAudio" class=' play-control' src='../../images/pause.png'></image>
+        <image wx:else bindtap="pauseAudio" class=' play-control' src='../../images/play.png'></image>
+        <icon bindtap='playRight' class="iconfont-towardx playToward {{currentIndex==courseDirectoryCellList.length-1? 'notToward':'canToward'}}"></icon>
+    </view>
+
+    <view class='my-play-list' hidden='{{!showList}}' bindtap='hiddenList'>
+        <scroll-view class='play-scroll' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class='play-directory' catchtap='haha'>播放目录（{{courseDirectoryCellList.length}}）
+            </view>
+            
+            <view class='playList'>
+            <view class='sep-375-href'></view>
+                <view catchtap='toplay' data-free="{{item.isFree}}" data-islaststudy="{{item.isLastStudy}}" id="{{index}}" wx:for="{{courseDirectoryCellList}}" wx:key="this" data-playing="{{item.audioPlaying}}">
+                    <template is="courseDirectoryCell" data="{{item, index}}" />
+                </view>
+            </view>
+
+        </scroll-view>
+    </view>
+</view>

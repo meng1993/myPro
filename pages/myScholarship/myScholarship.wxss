@@ -1,0 +1,195 @@
+ @import '../../templates/courseCell/courseCell.wxss'; 
+
+
+
+.item-price {
+  font-size: 32rpx;
+  color: #ec3131;
+  margin-top: 6rpx;
+}
+.group-left {
+  width: 140rpx;
+  height: 180rpx;
+}
+.group-content {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.groupPrice {
+  color: #353535;
+}
+.currentPrice {
+  font-size: 24rpx;
+  color: #ec3131;
+  font-weight: bold;
+}
+.original {
+  font-size: 28rpx;
+  color: #666;
+  text-decoration: line-through;
+  margin-left: 14rpx;
+}
+.imaginaryLine {
+  position: absolute;
+  bottom: 0;
+  left: 18rpx;
+  width: 658rpx;
+  height: 0;
+  border-top: 6rpx dashed #E5E5E5;
+}
+/* czy新增 */
+.item-time .btn_share {
+  position:absolute;
+  right:28rpx;
+  top: 180rpx;
+  width: 188rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  border: 1px solid #EE7F00;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  color: #EE7F00;
+  margin-left: 200rpx;
+  margin-top: 10rpx;
+}
+.share_price {
+  font-size: 40rpx;
+  color: #EC3131;
+}
+.my_collage {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  color: #EC3131;
+}
+.my_collage .collage_date {
+  width: 300rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #666666;
+}
+.my_collage .collage_status {
+  width: 120rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  background: #FDEED6;
+  border-radius: 200rpx;
+}
+.my_collage .status_success {
+  background: #EDF7E7;
+  color: #7FBD5B;
+}
+.my_collage .status_fail {
+  background: #FFEAEA;
+  color: #EC3131;
+}
+/*11111111111111---->top1*/
+.scholarship .top_one {
+  width: 750rpx;
+  height: 240rpx;
+}
+.scholarship .top_common {
+  position: relative;
+  width: 375rpx;
+  height: 240rpx;
+  text-align: center;
+  line-height: 240rpx;
+  font-size: 44rpx;
+  color: #353535;
+}
+.scholarship .top_one .top_one_left {
+  float: left;
+}
+.scholarship .top_one .top_one_left .text_money {
+  position: absolute;
+  width: 375rpx;
+  height: 150rpx;
+  line-height: 200rpx;
+  font-size: 44rpx;
+  color: #353535;
+  left: 0;
+  bottom: 85rpx;
+  text-align:left;
+  padding-left:68rpx;
+  font-weight: bold;
+}
+.scholarship .top_one .top_one_left .text_describe {
+  position: absolute;
+  width: 375rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  color: #999999;
+  left: 0;
+  bottom: 60rpx;
+  text-align:left;
+  padding-left:68rpx;
+}
+.scholarship .top_one .top_one_right {
+  float: right;
+}
+.scholarship .top_one .top_one_right .scholarship {
+  width: 180rpx;
+  height: 142rpx;
+  margin: 49rpx 98rpx;
+}
+/*2222222222222222222222---->top2*/
+.scholarship .top_two {
+  width: 750rpx;
+  height: 170rpx;
+}
+.scholarship .top_two .btn_common {
+  float: left;
+  width: 268rpx;
+  height: 80rpx;
+  background: #EE7F00;
+  border-radius: 200rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.scholarship .top_two .btn_tixian {
+  margin: 44rpx 240rpx;
+  border: 1px solid rgba(5, 5, 5, 0.1);
+  color: #fff;
+}
+.scholarship .top_two .btn_balance {
+  margin-top: 44rpx;
+  color: #fff;
+}
+.scholarship .btn_tab {
+  width: 750rpx;
+  height: 100rpx;
+  background: red;
+}
+
+
+/*新增*/
+
+.noCourseImg{
+  width: 202rpx;
+  height: 138rpx;
+}
+
+.noList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-top: 272rpx;
+}
+.noContentText{
+  font-size:28rpx;
+  color:#999;
+  text-align:center;
+  margin-top:34rpx;
+}
+
+.to_buy{
+  margin-top: 40rpx;
+  background-color:  #EE7F00;
+  color: #FFFFFF;
+}

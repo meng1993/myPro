@@ -1,0 +1,10 @@
+<!--pages/groupNotice/groupNotice.wxml-->
+<view class='groupNotice'>
+    <view class='noticeTitle'>关于组团</view>
+    <view class='noticeContent'>
+        <view class='smallTitle'>1、“组团”是什么？</view>
+        <p class=''>组团功能是“地心引力”的一种课程促销模式，用户可以通过组团功能以更优惠的团购价格购买课程。</p>
+        <view class='smallTitle'>2、“组团”需注意什么？</view>
+        <p class=''>组团有效期为24小时，只有当组团人数全部对课程以组团价格支付完成后，才可以进入学习。只有以组团价支付成功之后才可以邀请好友参与。组团人数未达到开团人数，即视为组团失败，已支付费用在72小时之内自动返还至微信余额。组团中的课程不可以再以原价购买，发起组团后不可以主动取消。</p>
+    </view>
+</view>

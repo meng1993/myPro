@@ -1,0 +1,57 @@
+<!--pages/editMessage/editMessage.wxml-->
+<view class='edit_message'>
+  <!--头像-->
+  <view class='line_head img' bindtap='setPhotoInfo'>
+    <view class='left'>头像</view>
+    <view class='right'>
+      <!-- <image src='../../images/1.png'></image> -->
+      <image wx:if="{{imgUrl!=null}}" src="{{imgUrl}}" background-size="cover"></image>
+      <image wx:else src="{{imgUrl}}" background-size="cover"></image>
+    </view>
+  </view>
+  <!--昵称-->
+   <view class='line_head'>
+    <view class='left'>昵称</view>
+    <view class='right'>
+      <input type="text" value='张三'></input>
+    </view>
+  </view> 
+  <!--手机号-->
+  <view class='line_head number'>
+    <view class='left'>手机号</view>
+    <view class='right'>
+      <input type="text" placeholder='请输入'></input>
+    </view>
+  </view> 
+  <view class='sep-375-10'></view>
+  <!--公司-->
+  <!-- <view class='line_head'>
+    <view class='left'>公司</view>
+    <view class='right'>
+      <input type="text" placeholder='请输入'></input>
+    </view>
+  </view>  -->
+  <!--部门-->
+  <!-- <view class='line_head'>
+    <view class='left'>部门</view>
+    <view class='right'>
+      <input type="text" placeholder='请输入'></input>
+    </view>
+  </view>  -->
+  <!--职位-->
+  <!-- <view class='line_head'>
+    <view class='left'>职位</view>
+    <view class='right'>
+      <input type="text" placeholder='请输入'></input>
+    </view>
+  </view>  -->
+  <!--城市-->
+  <!-- <view class='line_head'>
+    <view class='left'>城市</view>
+    <view class='right'>
+      <input type="text" placeholder='请输入'></input>
+    </view>
+  </view>  -->
+   
+
+</view>

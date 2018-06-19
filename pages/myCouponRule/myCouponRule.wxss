@@ -1,0 +1,17 @@
+/* pages/myCouponRule/myCouponRule.wxss */
+.coupon_rule {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.coupon_rule > view {
+  width: 694rpx;
+  padding: 0 28rpx;
+  font-size: 32rpx;
+  color: #000000;
+  text-align: justify;
+  line-height: 48rpx;
+}
+.coupon_rule > view:nth-child(1) {
+  padding-top: 38rpx;
+}

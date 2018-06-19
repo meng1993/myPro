@@ -1,0 +1,4 @@
+<!--pages/liveRoom/liveRoom.wxml-->
+<view>
+  <!-- <live-pusher id="videoPusher" class="video" url="{{url}}  orientation="{{orientation}}" muted="{{muted}}" bindstatechange="statechange" binderror="error"></live-pusher> -->
+</view>

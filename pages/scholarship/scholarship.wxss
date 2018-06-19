@@ -1,0 +1,23 @@
+.scholarship-cell {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28rpx;
+}
+.scholarship-title {
+  font-size: 32rpx;
+  color: #353535;
+  width: 160rpx;
+}
+.scholarship-price {
+  font-size: 36rpx;
+  color: #ec3131;
+}
+.scholarship-input {
+  flex: 1;
+}
+.placeholder-class {
+  font-size: 32rpx;
+  color: #999999;
+}

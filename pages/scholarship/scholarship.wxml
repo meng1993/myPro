@@ -1,0 +1,11 @@
+<view class='scholarship-cell'>
+    <text class='scholarship-title'>可用余额</text>
+    <text class='scholarship-price'>￥{{scholarship}}</text>
+</view>
+<view class='sep-375-10'></view>
+<view class='scholarship-cell'>
+    <text class='scholarship-title '>抵扣金额</text>
+    <input type='digit' class='scholarship-input' placeholder="输入抵扣金额" placeholder-class="placeholder-class" bindinput="myInput" bindblur="myBlur" bindfocus='myFocus' value="{{chooseScholarship}}" />
+</view>
+<view bindtap='useScholarship' wx:if="{{canUse}}" class='btn-319-44' style='margin-top: 64rpx'>确定</view>
+<view bindtap='notUse' wx:else class='btn-319-44' style='margin-top: 64rpx;background: rgba(238,127,0,0.40)'>确定</view>

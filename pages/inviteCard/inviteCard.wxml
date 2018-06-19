@@ -1,0 +1,14 @@
+<!--pages/inviteCard/inviteCard.wxml--> 
+<view class='card_box'>
+  <view class='main_text'>推荐赚¥{{message.distCommission/100}}</view>
+  <view class='main_describe'>推荐朋友购买后，即可赚奖学金(奖学金可提现）</view>
+  <image class='posters' src='{{message.distPosterUrl}}'>
+    <image class='Qr_cord' src='{{message.distQrCode}}'></image>
+    <image class='share_header_img' src='{{message.avatarUrl}}'></image>
+    <text class='share_name'>{{message.nickName}}</text>
+  </image>  
+
+  <button class='recommend my-160-44-btn' open-type="share">推荐给好友</button>
+  <view class='get_posters my-160-44-btn' bindtap='save'>生成海报拿奖金</view>
+  <canvas canvas-id="myCanvas" wx:if="{{canShow == true}}" style="width:200px;height:315px;margin-left: 79rpx;margin-top: 560rpx;"/>
+</view>

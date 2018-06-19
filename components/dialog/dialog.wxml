@@ -1,0 +1,6 @@
+<view>
+<view  bindtap="onTap" wx:for="{{list}}" id="{{index}}" data-name="{{index}}">
+	<button>{{item.title}}</button>
+</view>
+
+</view>

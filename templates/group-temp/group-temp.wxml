@@ -1,0 +1,21 @@
+<template name="groupMember">
+    <view class='memberCell' style='background: rgba(0, 0, 0, 0);'>
+        <image src='{{item.headImg}}' class='cell-avatar'></image>
+        <view>
+            <view class='member-name'>{{item.name}}
+                <view wx:if="{{item.leader}}" class='head'>团长</view>
+            </view>
+            <view class='member-date'>{{item.leader?'开':'参'}}团时间：{{item.joinTime}}</view>
+        </view>
+    </view>
+</template>
+
+<template name="group-success">
+        <view class='group-success'>
+            <view class='group-success-text'>
+                <image class='success-icon' src='../../images/success.png'></image>拼团成功!
+            </view>
+            <view><text>3</text>人参团/<text>3</text>人成团</view>
+        </view>
+       
+</template>

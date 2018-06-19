@@ -1,0 +1,123 @@
+.rec-item {
+  padding: 0 28rpx;
+  display: flex;
+}
+.item-left {
+  width: 164rpx;
+  height: 214rpx;
+}
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rpx auto 4rpx 26rpx;
+}
+.item-title {
+  color: #353535;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item-content {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.item-icon {
+  color: #999;
+  font-size: 28rpx;
+}
+.item-time {
+  color: #999;
+  font-size: 24rpx;
+  /* margin-top: 8rpx; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+	width: 464rpx;
+  margin-left: 10rpx;
+}
+.item-icon-text {
+  margin: 0 30rpx 0 8rpx;
+}
+.item-price {
+  font-size: 32rpx;
+  color: #ec3131;
+  margin-top: 6rpx;
+}
+.study-buy {
+  width: 326rpx;
+  height: 140rpx;
+}
+.study-top {
+  padding: 28rpx 28rpx 38rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.study-recently {
+  font-size: 36rpx;
+  color: #353535;
+  height: 100rpx;
+  padding: 0 26rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+}
+.study-cell {
+  display: flex;
+  padding: 42rpx 28rpx 42rpx;
+  position: relative;
+}
+.study-contentcell {
+  display: flex;
+  margin-top: 4rpx;
+}
+.study-icon {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 6rpx;
+}
+.study-punchCard {
+  padding: 0 28rpx;
+  height: 44rpx;
+  font-size: 28rpx;
+  color: #ee7f00;
+  border: 1px solid #ee7f00;
+  border-radius: 8rpx;
+  text-align: center;
+  margin-right: 44rpx;
+  line-height: 44rpx;
+}
+.appraisal {
+  color: #999;
+  border-color: #999;
+}
+.hasClock {
+  position: absolute;
+  left: 120rpx;
+  bottom: 218rpx;
+  width: 84rpx;
+  height: 40rpx;
+  z-index: 1;
+}
+
+
+/*新增*/
+
+.noCourseImg{
+  width: 202rpx;
+  height: 138rpx;
+}
+
+.noList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-top: 272rpx;
+}
+.noContentText{
+  font-size:28rpx;
+  color:#999;
+  text-align:center;
+  margin-top:34rpx;
+}
+

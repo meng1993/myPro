@@ -1,0 +1,103 @@
+<!--pages/index/courseDetails/courseDetails.wxml-->
+
+<view wx:if="{{courseDetailData != ''}}">
+    <image class='course-det-backImg' src='{{courseDetailData.bigCover}}'>
+        <!--分销 -->
+        <view wx:if="{{courseDetailData.isDistribution}}" class='shareImg' bindtap='toShare' data-courseId="{{courseId}}">分享赚
+            <text style='font-size: 20rpx'>￥</text>{{courseDetailData.stairDistMoney/100}}
+        </view>
+        <!--授权框 -->
+        <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+            <loginToast bind:getUserInfo="getUserInfo" />
+        </view>
+        <!-- 登录 -->
+        <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+            <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" />
+        </view>
+    </image>
+
+    <view class='cd-price-detail'>
+        <view style='margin-top:10rpx;display: flex'>
+            <text class='cd-price-icon'>￥<text class='cd-price'>{{courseDetailData.seckillPrice/100 || courseDetailData.sellPrice/100}}</text></text>
+            <view hidden='{{courseDetailData.isSeckill==0}}' class='live-countDown cd-count'>
+                <text class='cd-countdown-text'>距离优惠结束<text class='cd-not-price'>￥{{courseDetailData.sellPrice/100 }}</text></text>
+                <view class='countUp-time'>
+                    <text class='countUp-unit'>{{countDownArr[0]||'00'}}</text> :
+                    <text class='countUp-unit'> {{countDownArr[1]||'00'}}</text> :
+                    <text class='countUp-unit'>  {{countDownArr[2]||'00'}}</text> :
+                    <text class='countUp-unit'>  {{countDownArr[3]||'00'}}</text>
+                </view>
+            </view>
+
+        </view>
+        <view style='display: flex;align-items: center;margin-top: 18.8rpx;'>
+            <icon class='iconfont-time' style='color: #999999; font-size: 24rpx;'></icon>
+            <text class='courseDet-IconText' style='margin-right: 48rpx'>{{courseDetailData.hourNum}}课时/{{courseDetailData.duration || 0}}分钟</text>
+            <icon class='iconfont-shouting' style='color: #999999; font-size: 22rpx;'></icon>
+            <text class='courseDet-IconText'>{{courseDetailData.studyNum}}人已学习</text>
+        </view>
+        <!-- <image wx:if="{{courseDetailData.isClock}}" class='cd-returnMoney' src='../../images/btn.png'></image> -->
+    </view>
+    <view class='sep-375-10'></view>
+
+    <view class='my-tabBar'>
+        <view wx:for="{{['简介', '课程']}}" wx:key="this" class='tabBar-item' id="{{index}}" bindtap='tabClick' style='position:relative'>
+            <text style='font-size: 32rpx;position:relative' class="tabBar-title {{activeIndex==index? 'navbar__item_on' : 'navbar__item_off'}}">{{item}}
+				<text class="tabBar-slider" hidden='{{activeIndex!=index}}'>
+				</text>
+            </text>
+        </view>
+    </view>
+    <view class='sep-375-href'></view>
+
+    <view class="tabbar-content" >
+        <view hidden="{{activeIndex != 0}}" class='cd-desc'>
+            <import src="../../wxParse/wxParse.wxml" />
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+
+        <view hidden="{{activeIndex != 1}}">
+
+            <import src='../../templates/courseDirectoryCell/courseDirectoryCell.wxml' />
+            <view wx:if="{{courseDirectoryCellList!=''}}" bindtap='toplay' data-free="{{item.isFree}}" data-islaststudy="{{item.isLastStudy}}" data-playing="{{item.audioPlaying}}" id="{{index}}" wx:for="{{courseDirectoryCellList}}" wx:key="this">
+                <template is="courseDirectoryCell" data="{{item, index}}" />
+            </view>
+            <view wx:if="{{courseDirectoryCellList==''}}" class='noDirectory' style='background-color: #f2f2f2' >暂无课程</view>
+        </view>
+    </view>
+    <view style='height: 128rpx;background-color: #f2f2f2'></view>
+    <view class='my-375-64-footer'>
+        <view class='sep-375-href'></view>
+        <view class='courseDet-bottom'>
+            <view class='cd-botIcon' bindtap='toIndex'>
+                <icon class='iconfont-fenzu cd-bot-icon'></icon>
+                <text class='cd-bot-text'>首页</text>
+            </view>
+            <view class='cd-botIcon2' bindtap="listenFree">
+                <icon class='iconfont-shiting cd-bot-icon'></icon>
+                <text class='cd-bot-text'>试听</text>
+            </view>
+            <view>
+                <view wx:if="{{courseDetailData.isGroup==1&&courseDetailData.isBuy == 0}}" class='cd-footer-det'>
+                    <view bindtap='courseBuy' class='cd-buy my-120-40-btn'>购买
+                        <text class='cd-buy-symbol'>￥</text>{{courseDetailData.seckillPrice/100 || courseDetailData.sellPrice/100 }}
+                    </view>
+                    <view bindtap='courseBuy' class='cd-groupBuy my-120-40-btn' id="2">3人组团
+                        <text class='cd-buy-symbol'>￥</text>{{courseDetailData.groupPrice/100 }}</view>
+                </view>
+                <view wx:if="{{courseDetailData.isGroup==0&&courseDetailData.isBuy == 0&&courseDetailData.sellPrice!=0}}" class='cd-footer-det'>
+                    <view bindtap='courseBuy' class='btn-250-40'>购买
+                        <text class='cd-buy-symbol'>￥</text>{{courseDetailData.seckillPrice/100 || courseDetailData.sellPrice/100 }}</view>
+                </view>
+                 <view wx:if="{{courseDetailData.isGroup==0&&courseDetailData.isBuy == 0&&courseDetailData.sellPrice==0}}"  class='cd-footer-det'>
+                    <view bindtap='listenFree' class='btn-250-40'>免费学习</view>
+                </view>
+                <view wx:if="{{courseDetailData.isBuy != 0}}" class='cd-footer-det'>
+                     <view bindtap='listenFree' wx:if="{{courseDetailData.isBuy==1}}" class='btn-250-40'>进入学习</view> 
+                    <view bindtap='toGroupDetail' wx:if="{{courseDetailData.isBuy==3}}" class='btn-250-40'>已发团</view>
+                     <view bindtap='toGroupDetail' wx:if="{{courseDetailData.isBuy==2}}" class='btn-250-40'>已参团</view> 
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

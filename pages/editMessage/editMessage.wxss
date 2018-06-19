@@ -1,0 +1,51 @@
+/* pages/editMessage/editMessage.wxss */
+.edit_message {
+  position: fixed;
+  width: 100%;
+  /* height: 100%; */
+}
+.edit_message .line_head {
+  width: 722rpx;
+  height: 100rpx;
+  text-align: left;
+  line-height: 100rpx;
+  margin-left: 28rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.edit_message .number {
+  border-bottom: none;
+}
+.edit_message .img {
+  height: 150rpx;
+  line-height: 150rpx;
+}
+.edit_message .line_head .left {
+  width: 150rpx;
+  height: 100%;
+  float: left;
+  font-size: 32rpx;
+  color: #353535;
+}
+.edit_message .line_head .right {
+  width: 500rpx;
+  height: 100%;
+  float: right;
+  padding-right: 28rpx;
+  text-align: right;
+}
+.edit_message .line_head .right image {
+  width: 88rpx;
+  height: 88rpx;
+  float: right;
+  margin: 36rpx 28rpx;
+  border-radius: 50%;
+}
+.edit_message .line_head .right input {
+  width: 100%;
+  height: 100%;
+  line-height: 100rpx;
+}
+.input-placeholder {
+  font-size: 32rpx;
+  color: #999999;
+}

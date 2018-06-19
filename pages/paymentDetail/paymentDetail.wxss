@@ -1,0 +1,58 @@
+@import '../../templates/courseCell/courseCell.wxss';
+
+.payDeatail_box{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  background-color:#f2f2f2;
+}
+.payDetail-cell {
+    padding: 0 28rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paycell-title {
+    font-size: 28rpx;
+    color: #000;
+}
+
+.use {
+    font-size: 28rpx;
+    color: #ec3131;
+}
+
+.notUse {
+    font-size: 28rpx;
+    color: #999;
+}
+
+.notice {
+    color: #999;
+    background: #f2f2f2;
+    padding: 28rpx 28rpx 0;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.notice-icon {
+    font-size: 26rpx;
+    position: absolute;
+    top: 24rpx;
+    left: 28rpx;
+}
+
+.notice-text {
+    font-size: 20rpx;
+    display: inline;
+    text-indent:35rpx;
+    
+}
+
+.paycell-right {
+    display: flex;
+    align-items: center;
+}

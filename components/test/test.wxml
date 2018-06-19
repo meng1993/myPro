@@ -1,0 +1,3 @@
+<template name="test">
+	<view>{{item.title}}</view>
+</template>

@@ -1,0 +1,4 @@
+<!--pages/webView/webView.wxml-->
+<view>
+     <web-view src="{{url}}" bindmessage="webViewBack"></web-view> 
+</view>

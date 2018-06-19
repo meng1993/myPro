@@ -1,0 +1,61 @@
+<!--引入自定义课程模板 -->  
+<view class='customLoading' wx:if="{{payData == ''}}"></view>
+<view wx:else class='payDeatail_box'>
+    <view class='rec-item' style="padding-top: {{!Index? 44+'rpx' : 28+ 'rpx'}}; padding-bottom: {{!Index? 42+'rpx' : 28 +'rpx'}}">
+        <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+            <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" />
+        </view>
+        <image class='item-left' src="{{payData.smallCover}}" ></image>
+        <view class='item-right'>
+            <view>
+                <view class='item-title'>{{payData.mainTitle}}</view>
+                <view class='item-content'>{{payData.secondTitle}}</view>
+            </view>
+            <!--直播课程的付款详情  -->
+            <view>
+                <view class='item-content groupPrice'>
+                    <!-- <text class='currentPrice'>￥<text style='font-size:36rpx'>{{ showPrice/100}}</text></text> -->
+                    <view class='item-content groupPrice'>{{activeType==2?'组团价:' : (activeType==3? '秒杀价':'')}}
+                        <text class='currentPrice'>￥<text style='font-size:36rpx'>{{showPrice/100}}</text></text>
+                        <text wx:if="{{activeType!=1}}" class='original'>￥{{payData.sellPrice/100}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='sep-375-10'></view>
+    <view>
+        <view class='payDetail-cell' bindtap='discount'>
+            <text class='paycell-title'>优惠券</text>
+            <view class='paycell-right'>
+                <text wx:if="{{useDiscount==false && canUseDiscount.length==0}}" class='notUse'>暂无可用</text>
+                <text wx:if="{{useDiscount==false && canUseDiscount.length!=0}}" class='use'>{{canUseDiscount.length}}张可用</text>
+                <text wx:if="{{useDiscount==true}}" class='use'>-￥{{discount}}</text>
+                <icon class='iconfont-next'></icon>
+            </view>
+        </view>
+        <view class='index-sep'></view>
+
+        <view class='payDetail-cell' bindtap='scholarship'>
+            <text class='paycell-title'>奖学金抵扣</text>
+            <view class='paycell-right'>
+                <text wx:if="{{useScholar == true}}" class='use'>-￥{{scholarship}}</text>
+                <text wx:if="{{useScholar == false&&allScholarship!=0}}" class='use'>可抵扣</text>
+                <text wx:if="{{useScholar == false&&allScholarship==0}}" class='notUse'>暂无可用</text>
+                <icon class='iconfont-next'></icon>
+            </view>
+        </view>
+    </view>
+    <view class='notice'>
+        <icon class='notice-icon iconfont-notice'></icon>
+        <p class='notice-text'>此课程属于虚拟商品，购买之后不支持退款，可称为线上语音录播，一次购买，永久回听。更多课程问题可咨询场妹S(ID:dxylls)。地心引力工厂对本次课程保有最终解释权。</p>
+    </view>
+    <view style='padding-top: 104rpx;background-color: #f2f2f2;'>
+        <!-- <button wx:if="{{!hasOrder}}" bindtap='orderPay' class='btn-319-44'>确认支付￥{{payPrice}}</button>  -->
+        <form wx:if="{{!hasOrder}}" bindsubmit="orderPay" report-submit='true'>
+          <button class='btn-319-44' form-type="submit">确认支付￥{{payPrice}}</button>
+        </form>  
+        <button wx:elif="{{hasOrder}}" class='btn-319-44' style='background: rgba(238,127,0,0.40);'>已下单，待支付</button>
+    </view>
+</view>

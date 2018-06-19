@@ -1,0 +1,58 @@
+<view class='customLoading' wx:if="{{liveData == ''}}">
+    
+</view>
+<view wx:else>
+    <image class='back' src='{{liveData.bigCover}}'>
+        <view class='live-countDown'>
+            <image class='index-live-img' src='../../images/live.png'></image>
+            <view class='countUp-time'>
+                <text class='countUp-unit'>{{countDownArr[0]||'00'}}</text> :
+                <text class='countUp-unit'>{{countDownArr[1]||'00'}}</text> :
+                <text class='countUp-unit'>  {{countDownArr[2]||'00'}}</text> :
+                <text class='countUp-unit'>  {{countDownArr[3]||'00'}}</text>
+            </view>
+        </view>
+    </image>
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+    <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+        <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" />
+    </view>
+    <view class='market'>
+        <view class='market-title'>{{liveData.mainTitle }}</view>
+        <view class='market-content'>{{liveData.secondTitle }}</view>
+        <icon class='iconfont-share shareicon'></icon>
+    </view>
+    <view class='sep-375-10'></view>
+    <view class='course-desc'>课程介绍</view>
+    <view class='sep-375-href'></view>
+    <view style='padding: 42rpx 28rpx;'>
+        <import src="../../wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <!-- <import src='../../templates/courseDirectoryCell/courseDirectoryCell.wxml' />
+    <template is="courseRecommend" data="{{item, index}}" /> -->
+
+    <view class='my-375-64-footer'>
+        <view class='sep-375-href'></view>
+        <view class='footer-text'>
+            <view class='appoint-num'>{{liveData.studyNum}}
+                <view style='color: #3f3f3f;margin-left: 6rpx'>人{{liveData.isStart==1 ? '已加入':'预约'}}</view>
+            </view>
+            <!-- <view bindtap='signUp' class='sign-up my-160-44-btn'>{{isSignUp?
+			 "预约报名￥9.9" : ({{ liveStart ? '进入直播间' : '直播未开始' }}) }}</view>  -->
+            <view wx:if="{{liveData.isTeacher==0}}">
+                <view wx:if="{{liveData.isBuy==0}}" bindtap='signUp' class='sign-up my-160-44-btn'>预约报名
+                    <text style='font-size: 24rpx'>￥</text>{{liveData.sellPrice/100}}</view>
+                <view wx:elif="{{liveData.isStart==1}}" bindtap='enterLive' class='sign-up my-160-44-btn'>进入直播间</view>
+                <view wx:else bindtap='notStart' class='sign-up notStart my-160-44-btn'>直播未开始</view>
+            </view>
+            <view class='sign-up my-160-44-btn' wx:elif="{{liveData.isStart==1}}" bindtap='live'>去直播</view>
+            <view wx:else class='sign-up notStart my-160-44-btn'>直播未开始</view>
+
+            <!-- <view bindtap='enterLive'>去直播</view>
+      <view bindtap='look'>观看直播</view> -->
+        </view>
+    </view>
+</view>

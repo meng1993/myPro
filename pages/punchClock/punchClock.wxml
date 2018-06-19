@@ -1,0 +1,89 @@
+<!--pages/punchClock/punchClock.wxml--> 
+<import src='../../templates/punch_temp/punch_temp.wxml' />
+<import src='../../templates/punch_temp_list/punch_temp_list.wxml' />
+ <view class='punch_clock'> 
+  <image class='clock_bg' src='../../images/study/punch_clock_bg.png'></image>
+  <!--top结果部分-->
+  <!-- <view class='top_result'>
+    <view class='result_item'>
+      <view class='number'>4280.0</view>
+      <view class='name'>报名学费</view>
+    </view>
+    <view class='result_item'>
+      <i class="left"></i>
+      <view class='number'>231.0</view>
+      <view class='name'>奖金池</view>
+      <i class="right"></i>
+    </view>
+    <view class='result_item'>
+      <view class='number'>1</view>
+      <view class='name'>打卡次数</view>
+    </view>
+  </view> -->
+  <!-- <template is="punch_top" data="{{topData}}" /> -->
+  <view class='top_result'>
+    <view class='result_item'>
+      <view class='number'>{{topData.realMoney}}</view>
+      <view class='name'>报名学费</view>
+    </view>
+    <view class='result_item'>
+      <i class="left"></i>
+      <view class='number'>{{topData.bonusPool/100}}</view>
+      <view class='name'>奖金池</view>
+      <i class="right"></i>
+    </view>
+    <view class='result_item'>
+      <view class='number'>{{clockNum}}</view>
+      <view class='name'>打卡次数</view>
+    </view>
+  </view>
+  
+
+  <!--下边内容部分-->
+  <view class="content {{finishPunch==true?'active':''}}">
+     <!-- <template is="punch_list"/>  -->
+    <!--打卡头部-->
+    <view class='content_top'>
+      <view class='content_top_title'>打卡日历</view>
+      <view class='content_top_describe' bindtap='jj' data-hh="11">
+        <image src='../../images/2.png'></image>
+        瓜分奖金说明
+      </view>
+    </view>
+    <!--打卡列表-->
+    <view class='punch_content'>
+      <view class='img_item' wx:for="{{topData.requireNum}}">
+        <block wx:if="{{index+1 <= clockNum}}">
+          <image src='../../images/study/btn_punch_checked.png'></image>
+          <text style='color: #EE7F00;'>{{index+1}}</text>
+        </block>
+        <block wx:else>
+          <image src='../../images/study/btn_punch.png'></image>
+          <text>{{index+1}}</text>
+        </block>
+        <!--如果不是最后一个、都显示中间横杠-->
+        <i wx:if="{{index+1 !== topData.requireNum}}"></i> 
+      </view>
+    
+    </view>
+    <block wx:if="{{finishPunch==false}}">
+      <view class='punch_describe'>当前{{topData.clockNum}}人已打卡，你将瓜分到<text>{{(topData.bonusPool/100)*(topData.getBonusRate/100)}}</text>元奖学金</view>
+      <view class="btn_daka {{hasClick==true ? 'hasClick' : ''}}" bindtap='punchClock' data-type="{{hasClick}}">马上打卡</view> 
+    </block>
+    <block wx:else>
+      <view class='bonus_describe'>您已成功瓜分到<text>{{(topData.bonusPool/100)*(topData.getBonusRate/100)}}</text>元奖学金</view>
+      <view class='scroll_box'>
+        <view class='scroll_title'>奖金瓜分记录</view>
+        <scroll-view class='container' scroll-y bindscrolltolower="bindDownLoad" bindscrolltoupper="refresh">
+          <view class='scroll_content' wx:for="{{bonusList}}">
+            <image src='{{item.avatarUrl}}'></image>
+            <view class='name'>{{item.username}}</view>
+            <view class='date'>{{item.time}}</view>
+          </view>
+        </scroll-view>
+      </view>
+    </block>
+
+  </view>
+
+ </view> 

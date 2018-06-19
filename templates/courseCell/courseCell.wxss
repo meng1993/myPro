@@ -1,0 +1,137 @@
+.rec-item {
+  padding: 0 28rpx;
+  display: flex;
+  position: relative;
+}
+.item-left {
+  width: 164rpx;
+  height: 214rpx;
+  border-radius: 4px;
+  background: #F0F0F0;
+}
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rpx auto 4rpx 26rpx;
+}
+.item-title {
+  color: #353535;
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+	width: 464rpx;
+}
+.item-content {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+	width: 464rpx;
+}
+.item-icon {
+  color: #999;
+  font-size: 24rpx;
+}
+.item-time {
+  color: #999;
+  font-size: 24rpx;
+  display: flex;
+}
+.iconfont-shouting{
+    font-size: 20rpx;
+}
+.item-icon-text {
+  margin: 0 30rpx 0 8rpx;
+}
+.item-price {
+  font-size: 32rpx;
+  color: #ec3131;
+  margin-top: 6rpx;
+}
+.group-left {
+  width: 140rpx;
+  height: 180rpx;
+}
+.group-content {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.groupPrice {
+  color: #353535;
+}
+.currentPrice {
+  font-size: 24rpx;
+  color: #ec3131;
+  font-weight: bold;
+}
+.original {
+  font-size: 28rpx;
+  color: #666;
+  text-decoration: line-through;
+  margin-left: 14rpx;
+}
+.imaginaryLine {
+  position: absolute;
+  bottom: 0;
+  left: 18rpx;
+  width: 658rpx;
+  height: 0;
+  border-top: 3rpx dashed #E5E5E5;
+}
+/* czy新增 */
+.item-time .btn_share {
+  width: 188rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  border: 1px solid #EE7F00;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  color: #EE7F00;
+  margin-left: 200rpx;
+  margin-top: 10rpx;
+}
+.share_price {
+  font-size: 40rpx;
+  color: #EC3131;
+}
+.my_collage {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  color: #EC3131;
+}
+.my_collage .collage_date {
+  width: 300rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #666666;
+}
+.my_collage .collage_status {
+  width: 120rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  background: #FDEED6;
+  border-radius: 200rpx;
+}
+.my_collage .status_success {
+  background: #EDF7E7;
+  color: #7FBD5B;
+}
+.my_collage .status_fail {
+  background: #FFEAEA;
+  color: #EC3131;
+}
+/*删除*/
+.courseCell .btn_delete{
+  
+  width: 32rpx;
+  height: 32rpx; 
+}

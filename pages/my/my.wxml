@@ -1,0 +1,41 @@
+<view class="page" >
+ <view hidden='{{!loginShow}}' class='login-toast' catchtap='hiddenLogin'>
+        <phoneToast bind:phoneNumber="getPhoneNumber" bind:phoneverity="phoneVerity" bind:hiddenToast="hiddenLogin" />
+    </view>
+
+    <!-- 授权弹框-->
+    <view hidden='{{!authorization}}' class='login-toast' catchtap='hiddenLogin'>
+        <loginToast bind:getUserInfo="getUserInfo" />
+    </view>
+    <view class='my-userInfo'>
+        <image class='my-avatar' src='{{personMessage.avatarUrl}}'></image>
+        <view bindtap='toEditMessage' data-personMessage="{{personMessage}}">
+            <view class='my-nickname'>{{personMessage.nickName}}</view>
+            <!-- <view class='my-content'>查看编辑资料</view> -->
+        </view>
+    </view>
+    <view wx:for="{{myCell}}" wx:key="this" data-id="{{item.id}}" bindtap='myCellClick'>
+        <view wx:if="{{index !== 6 && index !=7 && index!=4 && index!=5}}" class='my-cell'>
+            <image class='my-icon' src="{{item.icon}}"></image>
+            <view class='my-cell-text'>{{item.text}}</view>
+            <icon style='position:absolute;right:28rpx;color:#e7e9e9;' class='iconfont-next'></icon>
+        </view>
+        <!--在线客服一行-->
+        <view wx:elif="{{index === 6}}" class='my-cell contact_box'>
+            <image class='my-icon' src="{{item.icon}}"></image>
+            <view class='my-cell-text'>{{item.text}}</view>
+            <button open-type='contact' class='contact'></button>
+            <icon style='position:absolute;right:28rpx;color:#e7e9e9;' class='iconfont-next'></icon>
+        </view>
+        <!--邀请好友一行-->
+        <view class='my-invite' wx:if="{{index === 7}}" class='my-cell contact_box' bindtap='toInvite'>
+            <image class='my-icon' src="{{item.icon}}"></image>
+            <view class='my-cell-text'>{{item.text}}</view>
+            <text class='describe'>邀请好友、得{{inviteMoney/100}}元奖励</text>
+            <icon style='position:absolute;right:28rpx;color:#e7e9e9;' class='iconfont-next'></icon>
+        </view>
+
+        <view wx:if="{{index!==3&&index!=4&&index!=7}}" class='sep-327-harf'></view>
+        <view wx:elif="{{index==3}}" class='sep-375-10'></view>
+    </view>
+</view>

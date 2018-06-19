@@ -1,0 +1,19 @@
+<view class='btn_group'> 
+  <view bindtap='click' class="btn_common {{item.active==true ? 'active' : ''}}" wx:for="{{btnGroup}}" data-current="{{item.current}}">
+     <image src='{{item.img}}'></image>
+     <text class='btn_type'>{{item.text}}</text>  
+  </view>
+</view>
+
+<!--引入自定义课程模板 -->
+<import src='../../templates/courseCell/courseCell.wxml' />
+<view class='list_content'>
+  <view wx:for="{{hasBuyList}}" wx:key="this" id="{{item.courseId}}" bindtap='toCourseDetails'>
+    <template is="courseCell" data="{{item, playNum, hasBuy}}" />
+  </view>
+  <view class='noList' wx:if="{{hasBuyList.length == 0}}">
+    <image class='noCourseImg' src="../../images/courseNo.png"></image>
+    <text class='noContentText'>暂时没有相关课程</text>
+    <view class='my-160-44-btn to_buy' bindtap='toCourseList'>去购买</view>
+  </view>
+</view>

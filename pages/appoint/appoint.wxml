@@ -1,0 +1,41 @@
+<view class='edit_message appoint'>
+    <view class='line_head number'>
+        <view class='left' style='width:170rpx'>企业联系人</view>
+        <view class='right'>
+            <input type="text" value="{{trainApplyVO.linkMan}}" placeholder='必填' bindinput="getlinkMan"></input>
+        </view>
+    </view>
+    <view class='index-sep'></view>
+
+    <view class='line_head number'>
+        <view class='left'>手机号码</view>
+        <view class='right'>
+            <input type='number' maxlength="11" value='{{trainApplyVO.linkMobile}}' placeholder='必填' bindinput="getlinkMobile"></input>
+        </view>
+    </view>
+    <view class='index-sep'></view>
+
+    <view class='line_head number'>
+        <view class='left'>微信号</view>
+        <view class='right'>
+            <input type="text" value='{{trainApplyVO.linkWchat}}' placeholder='选填' bindinput="getlinkWchat"></input>
+        </view>
+    </view>
+    <view class='index-sep'></view>
+
+    <view class='line_head number'>
+        <view class='left'>公司名称</view>
+        <view class='right'>
+            <input type="text" value='{{trainApplyVO.companyName}}' placeholder='必填' bindinput="getcompanyName"></input>
+        </view>
+    </view>
+    <view class='index-sep'></view>
+
+    <view class='line_head number'>
+        <view class='left'>担任职务</view>
+        <view class='right'>
+            <input type="text" value='{{trainApplyVO.companyDuty}}' placeholder='选填' bindinput="getcompanyDuty"></input>
+        </view>
+    </view>
+</view>
+<view bindtap='submit' class='btn-319-44' style='margin-top: 94rpx'>提交</view>
